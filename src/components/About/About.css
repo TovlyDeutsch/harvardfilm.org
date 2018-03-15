@@ -1,0 +1,22 @@
+.opening_img {
+  min-width: 28rem;
+  margin: auto;
+}
+
+.filmForAll {
+  max-width: 1300px;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap-reverse;
+  box-sizing: border-box;
+}
+
+.right_text {
+  margin: auto;
+  max-width: 600px;
+}
+
+.top_text {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+}
