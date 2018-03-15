@@ -1,0 +1,12 @@
+.icon {
+  width: 1em;
+}
+
+.what_we_do {
+  display: flex;
+  margin: auto
+}
+
+.activity_block {
+  max-width: 300px;
+}

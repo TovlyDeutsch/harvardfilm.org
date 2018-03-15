@@ -7,6 +7,8 @@ import config from "../../data/SiteConfig";
 import Drawer from "../layouts/Drawer/Drawer";
 import Navigation from "../components/Navigation/Navigation";
 import About from "../components/About/About";
+import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
+import BelowTheFold from "../layouts/BelowTheFold/BelowTheFold";
 import SiteWrapper from "../layouts/SiteWrapper/SiteWrapper";
 import Footer from "../components/Footer/Footer";
 import MainHeader from "../layouts/MainHeader/MainHeader";
@@ -98,8 +100,10 @@ class IndexTemplate extends React.Component {
                 <span className="hidden">Scroll Down</span>
               </Link>
             </MainHeader>
-
-            <About/>
+            <BelowTheFold>
+              <About/>
+              <WhatWeDo/>
+            </BelowTheFold>
 
             {/* <PaginatedContent
               page={page}

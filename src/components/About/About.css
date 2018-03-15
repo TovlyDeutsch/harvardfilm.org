@@ -3,17 +3,34 @@
   margin: auto;
 }
 
-.filmForAll {
+.film_for_all {
   max-width: 1300px;
   display: flex;
   margin: auto;
   flex-wrap: wrap-reverse;
   box-sizing: border-box;
+  justify-content: center;
+}
+@media screen and (min-width: 1300px) {
+  .middle_text {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
 }
 
+
+@media screen and (max-width: 640px) {
+  .right_text {
+    max-width: 90vw !important;
+    margin: auto;
+  }
+  .bottom_text {
+    font-size: 15px !important;
+  }
+ }
+
 .right_text {
-  margin: auto;
-  max-width: 600px;
+  max-width: 670px;
 }
 
 .top_text {
