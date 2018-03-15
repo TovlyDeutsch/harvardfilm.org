@@ -4,9 +4,29 @@
 
 .what_we_do {
   display: flex;
-  margin: auto
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 1300px;
+  box-sizing: border-box;
 }
 
 .activity_block {
+  min-width: 300px;
   max-width: 300px;
+  margin: 10px auto;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #adadad;
+  padding: 20px;
 }
+
+@media screen and (max-width: 640px) {
+  .activity_block {
+    min-width: 10vw !important;
+    max-width: 90vw !important;
+  }
+  .what_we_do {
+    max-width: 90vw !important;
+  }
+ }

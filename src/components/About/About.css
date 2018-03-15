@@ -1,6 +1,7 @@
 .opening_img {
   min-width: 28rem;
-  margin: auto;
+  max-width: 100vw;
+  margin: 0 auto;
 }
 
 .film_for_all {
@@ -18,8 +19,7 @@
   }
 }
 
-
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 720px) {
   .right_text {
     max-width: 90vw !important;
     margin: auto;
@@ -27,10 +27,22 @@
   .bottom_text {
     font-size: 15px !important;
   }
+  .opening_img {
+    min-width: 1rem !important;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .film_for_all {
+    max-width: 100%;
+  }
+  .BelowTheFold {
+    margin: 10px 0;
+  }
  }
 
 .right_text {
   max-width: 670px;
+  margin: 0 auto;
 }
 
 .top_text {
