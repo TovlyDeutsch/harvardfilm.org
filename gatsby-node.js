@@ -41,6 +41,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     const indexPage = path.resolve("src/templates/index.jsx");
     const postPage = path.resolve("src/templates/post.jsx");
+    const filmPage = path.resolve("src/templates/film.jsx");
     const tagPage = path.resolve("src/templates/tag.jsx");
     const categoryPage = path.resolve("src/templates/category.jsx");
     const authorPage = path.resolve("src/templates/author.jsx");
@@ -112,6 +113,21 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }),
           circular: true
         });
+
+        // Creates Film Pages
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          if (node.frontmatter.category === 'film') {
+            console.log('films' + node.fields.slug)
+            createPage({
+              path: 'films' + node.fields.slug,
+              component: path.resolve(`./src/templates/film.jsx`),
+              context: {
+                // Data passed to context is available in page queries as GraphQL variables.
+                slug: node.fields.slug,
+              },
+            })
+          }
+        })
 
         const tagSet = new Set();
         const tagMap = new Map();

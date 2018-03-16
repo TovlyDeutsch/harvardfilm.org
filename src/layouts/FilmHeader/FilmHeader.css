@@ -1,0 +1,15 @@
+.film-template .film-header,
+.page-template .film-header {
+    margin-bottom: 3.4rem;
+}
+
+/* ==========================================================================
+       Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+    .film-template .film-header,
+    .page-template .film-header {
+        margin-bottom: 2rem;
+    }
+}

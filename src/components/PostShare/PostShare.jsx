@@ -28,7 +28,7 @@ class PostShare extends React.Component {
 
     return (
       <section className="share">
-        <h4>Share this post</h4>
+        <h4>Share this page</h4>
         <div style={{ display: "flex" }}>
           <TwitterShareButton url={url} title={post.title}>
             <a className="icon-twitter" style={{ fontSize: "1.4em" }}>
@@ -53,11 +53,6 @@ class PostShare extends React.Component {
           {/* <span className="hidden">Pinterest</span> */}
           {/* </a> */}
           {/* </PinterestShareButton> */}
-          <GooglePlusShareButton url={url}>
-            <a className="icon-google-plus" style={{ fontSize: "1.4em" }}>
-              <span className="hidden">Google+</span>
-            </a>
-          </GooglePlusShareButton>
         </div>
       </section>
     );

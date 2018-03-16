@@ -1,6 +1,15 @@
 .post-template .post-header,
 .page-template .post-header {
     margin-bottom: 3.4rem;
+    text-align: center;
+}
+
+.post-opener {
+  background-image: url(https://unsplash.it/1280/900/?random?BigTest);
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ==========================================================================

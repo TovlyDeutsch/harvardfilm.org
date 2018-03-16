@@ -3,8 +3,19 @@ import "./PostHeader.css";
 
 class PostHeader extends React.Component {
   render() {
-    const { children } = this.props;
-    return <header className="post-header">{children}</header>;
+
+    const { thumbnail, children } = this.props;
+    console.log(thumbnail)
+    var styles = {
+     backgroundImage: `url(${thumbnail})`
+    }
+    return (
+      <div className='post-opener' style={styles}>
+        <header className="post-header">
+          {children}
+        </header>
+      </div>
+    );
   }
 }
 

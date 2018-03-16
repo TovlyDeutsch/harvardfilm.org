@@ -46,7 +46,7 @@ export default class HTML extends React.Component {
           <link
             rel="stylesheet"
             type="text/css"
-            href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400"
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700"
           />
 
           {this.props.headComponents}
