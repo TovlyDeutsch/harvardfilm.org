@@ -79,9 +79,9 @@ class IndexTemplate extends React.Component {
                   onClick={this.handleOnClick}
                 />
               </MainNav>
-              <div className="vertical">
+              <div className="vertical" style={{display: 'block'}}>
                 <div className="main-header-content inner">
-                  <PageTitle text={config.siteTitle} />
+                  <img src="https://www.hcs.harvard.edu/hufa/wp-content/uploads/2018/02/hufa-logo-5.png" style={{width: 200}}/>
                   <PageDescription text={config.siteDescription} />
                   <SocialMediaIcons
                     urls={config.siteSocialUrls}
@@ -122,7 +122,7 @@ class IndexTemplate extends React.Component {
           {/* The tiny footer at the very bottom */}
           <Footer
             copyright={config.copyright}
-            promoteGatsby={config.promoteGatsby}
+            // promoteGatsby={config.promoteGatsby}
           />
         </SiteWrapper>
       </Drawer>

@@ -3,6 +3,7 @@
     position: relative;
     padding: 35px 40px;
     margin: 0 0 30px;
+    display: block
 }
 
 .main-nav a {

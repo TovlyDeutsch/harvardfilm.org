@@ -14,6 +14,9 @@ class MainHeader extends React.Component {
       if (cover) {
         return { backgroundImage: `url("${cover}")` };
       }
+      else {
+        return { backgroundColor: '#8a292e'}
+      }
       return null;
     };
 
