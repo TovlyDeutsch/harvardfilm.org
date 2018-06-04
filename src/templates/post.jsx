@@ -95,7 +95,7 @@ class PostTemplate extends React.Component {
         <Navigation config={config} onClose={this.handleOnClose} />
 
         <SiteWrapper>
-          <MainHeader className="post-head" cover={cover}>
+          <MainHeader className="post-head" cover={cover} color="white">
             <MainNav overlay={cover}>
               <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
               <MenuButton

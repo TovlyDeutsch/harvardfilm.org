@@ -37,7 +37,7 @@
 }
 
 .no-cover.main-header {
-    min-height: 160px;
+    min-height: 350px;
     max-height: 70vh;  
     background: #8a292e;
 }
@@ -126,7 +126,7 @@
         /* height: auto; Node: duplicate height values included in original Casper css */
         min-height: 240px;
         height: 60vh;
-        padding: 15% 0;
+        /* padding: 15% 0; */
     }
 
     .home-template .main-header::after { display: none; }
@@ -146,7 +146,7 @@
     }
 
     .no-cover.post-head.main-header {
-        height: 55px;
+        /* height: 55px; */
         padding: 0;
     }
 

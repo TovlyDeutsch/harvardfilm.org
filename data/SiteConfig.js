@@ -20,28 +20,28 @@ module.exports = {
   googleAnalyticsID: "UA-111982167-1", // GA tracking ID.
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
-    "https://github.com/haysclark/gatsby-starter-casper",
+    'https://www.youtube.com/channel/UCdESCXwXAUwXUeME-Bqf-Lg',
     "https://twitter.com/gatsbyjs",
-    "mailto:gatsbyjs@example.com"
+    "mailto:harvardfilmmaker@gmail.com"
   ],
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
   userLinks: [
-    {
-      label: "GitHub",
-      url: "https://github.com/haysclark/gatsby-starter-casper",
-      iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
-    },
-    {
-      label: "Twitter",
-      url: "https://twitter.com/gatsbyjs",
-      iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
-    },
-    {
-      label: "Email",
-      url: "mailto:harvardfilmmaker@gmail.com",
-      iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
-    }
+    // {
+    //   label: "GitHub",
+    //   url: "https://github.com/haysclark/gatsby-starter-casper",
+    //   iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
+    // },
+    // {
+    //   label: "Twitter",
+    //   url: "https://twitter.com/gatsbyjs",
+    //   iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
+    // },
+    // {
+    //   label: "Email",
+    //   url: "mailto:harvardfilmmaker@gmail.com",
+    //   iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
+    // }
   ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: {

@@ -15,7 +15,7 @@ import MainHeader from "../layouts/MainHeader/MainHeader";
 import MainNav from "../layouts/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
-import PageTitle from "../components/PageTitle/PageTitle";
+import CenterImage from "../components/CenterImage/CenterImage";
 import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../layouts/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
@@ -71,7 +71,7 @@ class IndexTemplate extends React.Component {
           {/* All the main content gets inserted here */}
           <div className="home-template">
             {/* The big featured header */}
-            <MainHeader cover={config.siteCover}>
+            <MainHeader cover={config.siteCover} color='#8a292e'>
               <MainNav overlay={config.siteCover}>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
                 <MenuButton
@@ -81,7 +81,7 @@ class IndexTemplate extends React.Component {
               </MainNav>
               <div className="vertical" style={{display: 'block'}}>
                 <div className="main-header-content inner">
-                  <img src="https://www.hcs.harvard.edu/hufa/wp-content/uploads/2018/02/hufa-logo-5.png" style={{width: 200}}/>
+                  <CenterImage src="/images/hufa-logo.png"/>
                   <PageDescription text={config.siteDescription} />
                   <SocialMediaIcons
                     urls={config.siteSocialUrls}

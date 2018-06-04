@@ -11,7 +11,7 @@ import Navigation from "../components/Navigation/Navigation";
 import SiteWrapper from "../layouts/SiteWrapper/SiteWrapper";
 import MainContent from "../layouts/MainContent/MainContent";
 import PostHeader from "../layouts/PostHeader/PostHeader";
-import PostFormatting from "../layouts/PostFormatting/PostFormatting";
+import FilmFormatting from "../layouts/FilmFormatting/FilmFormatting";
 import PostDate from "../components/PostDate/PostDate";
 import PostFooter from "../layouts/PostFooter/PostFooter";
 import AuthorImage from "../components/AuthorImage/AuthorImage";
@@ -56,9 +56,10 @@ class FilmTemplate extends React.Component {
     const { slug } = this.props.pathContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter
+    console.log(post)
     const { cover, title, date, author, tags, thumbnail } = post;
     console.log(thumbnail, author)
-    const className = post.post_class ? post.post_class : "post";
+    const className = post.category ? post.category : "post";
     const authorData = AuthorModel.getAuthor(
       data.authors.edges,
       author,
@@ -76,8 +77,8 @@ class FilmTemplate extends React.Component {
         <Navigation config={config} onClose={this.handleOnClose} />
 
         <SiteWrapper>
-          <MainHeader className="post-head">
-            <MainNav overlay={cover}>
+          <MainHeader className="post-head" color='white'>
+              <MainNav>
               <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
               <MenuButton
                 navigation={config.siteNavigation}
@@ -86,15 +87,15 @@ class FilmTemplate extends React.Component {
             </MainNav>
           </MainHeader>
           <MainContent>
-
+            <FilmFormatting className={className}>
               <PostHeader thumbnail={thumbnail}>
-                <h1 className="post-title">{title}</h1>
-                <section className="post-meta">
+                <h1 className="film-title">{title}</h1>
+                <section className="film-meta">
                   <PostDate date={date} />
                   <PostTags prefix=" " tags={tags} />
                 </section>
               </PostHeader>
-              <PostFormatting className={className}>
+              
               <section
                 className="post-content"
                 dangerouslySetInnerHTML={{ __html: postNode.html }}
@@ -109,7 +110,7 @@ class FilmTemplate extends React.Component {
                 <GhostSubscribe />
                 <Disqus postNode={postNode} />
               </PostFooter>
-            </PostFormatting>
+            </FilmFormatting>
           </MainContent>
         {/*  <ReadNext next={getNextData()} prev={getPrevData()} />*/}
 
