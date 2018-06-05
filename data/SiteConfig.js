@@ -5,7 +5,7 @@ module.exports = {
   siteTitle: "HUFA", // Site title.
   siteTitleAlt: "Harvard Undergraduate Filmmakers Association", // Alternative site title for SEO.
   siteLogo:
-    "https://www.hcs.harvard.edu/hufa/wp-content/uploads/2018/02/hufa-logo-5.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
+    "/images/hufa-logo.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "http://harvardfilm.org", // Domain of your website without pathPrefix.
   // pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:

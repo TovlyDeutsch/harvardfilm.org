@@ -57,7 +57,7 @@ class FilmTemplate extends React.Component {
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter
     console.log(post)
-    const { cover, title, date, author, tags, thumbnail } = post;
+    const { cover, title, date, author, tags, thumbnail, videoLink } = post;
     console.log(thumbnail, author)
     const className = post.category ? post.category : "post";
     const authorData = AuthorModel.getAuthor(
@@ -94,10 +94,11 @@ class FilmTemplate extends React.Component {
                   <PostDate date={date} />
                   <PostTags prefix=" " tags={tags} />
                 </section>
+                <iframe className="film-iframe" src={videoLink} frameBorder="0" allowFullScreen></iframe>
               </PostHeader>
-              
+              <br/>
               <section
-                className="post-content"
+                className="film-content"
                 dangerouslySetInnerHTML={{ __html: postNode.html }}
               />
 
@@ -138,6 +139,7 @@ export const pageQuery = graphql`
         date
         category
         tags
+        videoLink
         thumbnail
         author
         credits {

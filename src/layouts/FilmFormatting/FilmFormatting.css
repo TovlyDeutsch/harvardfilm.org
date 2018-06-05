@@ -1,8 +1,24 @@
+.film-iframe {
+    width: 900px;
+    height: 506px;
+}
+
+.film-content {
+    position: relative;
+    width: 80%; 
+    max-width: 900px;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+    border-bottom: #ebf2f6 1px solid;
+    word-wrap: break-word;
+}
+
 /* Every film, on every page, gets this style on its <article> tag */
 .film {
     position: relative;
     width: 100%; 
     margin: 0;
+    max-height: 100vh;
     padding-bottom: 4rem;
     word-wrap: break-word;
 }
@@ -59,7 +75,7 @@ div.page-template .film-title {
 
 .film-meta {
     display: block;
-    margin: 1rem 0 0;
+    margin: 1rem 0 2rem 0;
     font-family: "Playfair Display", serif;
     font-size: 1.3rem;
     line-height: 2.2rem;
@@ -118,6 +134,11 @@ div.page-template .film-title {
     div.page-template .film-title {
         font-size: 4.5rem;
     }
+    .film-iframe {
+        width: 100%;
+        height: calc(calc(100%) * 0.5625)
+        /* height: 506px; */
+    }
 }
 
 /* ==========================================================================
@@ -127,7 +148,6 @@ div.page-template .film-title {
 @media only screen and (max-width: 500px) {
     .film {
         width: auto;
-        margin: 2rem 16px;
         padding-bottom: 2rem;
         line-height: 1.65em;
     }

@@ -146,8 +146,8 @@
     }
 
     .no-cover.post-head.main-header {
-        /* height: 55px; */
         padding: 0;
+        height: auto;
     }
 
     .no-cover.author-head.main-header {

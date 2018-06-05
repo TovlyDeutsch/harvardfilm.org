@@ -124,7 +124,7 @@ class IndexTemplate extends React.Component {
             copyright={config.copyright}
             // promoteGatsby={config.promoteGatsby}
           />
-        </SiteWrapper>
+        </SiteWrapper> 
       </Drawer>
     );
   }

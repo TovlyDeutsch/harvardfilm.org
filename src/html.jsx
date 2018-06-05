@@ -43,11 +43,6 @@ export default class HTML extends React.Component {
           />
 
           {/* Styles'n'Scripts */}
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700"
-          />
 
           {this.props.headComponents}
           <link rel="shortcut icon" href={favicon} />
