@@ -1,15 +1,10 @@
-.film-iframe {
-    width: 900px;
-    height: 506px;
-}
-
 .film-content {
     position: relative;
     width: 80%; 
     max-width: 900px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    border-bottom: #ebf2f6 1px solid;
+    margin: 0 auto;
+    /* padding-bottom: 4rem; */
+    /* border-bottom: #ebf2f6 1px solid; */
     word-wrap: break-word;
 }
 
@@ -19,13 +14,13 @@
     width: 100%; 
     margin: 0;
     max-height: 100vh;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
     word-wrap: break-word;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .film
    just for the lolz and stylepoints. */
-.film::after {
+/* .film::after {
     display: block;
     content: "";
     width: 7px;
@@ -38,7 +33,7 @@
     background: #fff;
     border-radius: 100%;
     box-shadow: #fff 0 0 0 5px;
-}
+} */
 
 .film-title {
     color: rgb(219, 219, 219);
@@ -133,11 +128,6 @@ div.page-template .film-title {
 
     div.page-template .film-title {
         font-size: 4.5rem;
-    }
-    .film-iframe {
-        width: 100%;
-        height: calc(calc(100%) * 0.5625)
-        /* height: 506px; */
     }
 }
 

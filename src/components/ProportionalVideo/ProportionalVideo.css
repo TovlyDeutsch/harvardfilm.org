@@ -1,0 +1,20 @@
+/* .proportional-video-container {
+    position: relative;
+    margin-bottom: 56.25%;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    overflow: hidden;
+} */
+
+.film-iframe {
+  width: 80vw;
+  height: 45vw;
+}
+
+@media only screen and (max-width: 900px) {
+
+}
+
+@media only screen and (max-width: 500px) {
+
+}

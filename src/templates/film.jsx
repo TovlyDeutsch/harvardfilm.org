@@ -23,6 +23,7 @@ import PostTags from "../components/PostTags/PostTags";
 import Footer from "../components/Footer/Footer";
 import AuthorModel from "../models/author-model";
 import Disqus from "../components/Disqus/Disqus";
+import ProportionalVideo from '../components/ProportionalVideo/ProportionalVideo'
 
 class FilmTemplate extends React.Component {
   state = {
@@ -56,9 +57,7 @@ class FilmTemplate extends React.Component {
     const { slug } = this.props.pathContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter
-    console.log(post)
     const { cover, title, date, author, tags, thumbnail, videoLink } = post;
-    console.log(thumbnail, author)
     const className = post.category ? post.category : "post";
     const authorData = AuthorModel.getAuthor(
       data.authors.edges,
@@ -94,9 +93,8 @@ class FilmTemplate extends React.Component {
                   <PostDate date={date} />
                   <PostTags prefix=" " tags={tags} />
                 </section>
-                <iframe className="film-iframe" src={videoLink} frameBorder="0" allowFullScreen></iframe>
+                <ProportionalVideo videoLink={videoLink}/>
               </PostHeader>
-              <br/>
               <section
                 className="film-content"
                 dangerouslySetInnerHTML={{ __html: postNode.html }}

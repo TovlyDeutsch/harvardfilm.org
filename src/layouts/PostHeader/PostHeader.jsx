@@ -5,7 +5,6 @@ class PostHeader extends React.Component {
   render() {
 
     const { thumbnail, children } = this.props;
-    console.log(thumbnail)
     var styles = {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8),
         rgba(0, 0, 0, 0.8)), 
