@@ -3,6 +3,7 @@
     position: relative;
     padding: 35px 40px;
     margin: 0 0 30px;
+    display: block
 }
 
 .main-nav a {
@@ -32,7 +33,7 @@
 @media only screen and (max-width: 500px) {
     .main-nav {
         padding: 5px;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     .main-nav.overlay a:hover {

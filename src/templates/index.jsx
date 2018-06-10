@@ -15,7 +15,7 @@ import MainHeader from "../layouts/MainHeader/MainHeader";
 import MainNav from "../layouts/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
-import PageTitle from "../components/PageTitle/PageTitle";
+import CenterImage from "../components/CenterImage/CenterImage";
 import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../layouts/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
@@ -71,7 +71,7 @@ class IndexTemplate extends React.Component {
           {/* All the main content gets inserted here */}
           <div className="home-template">
             {/* The big featured header */}
-            <MainHeader cover={config.siteCover}>
+            <MainHeader cover={config.siteCover} color='#8a292e'>
               <MainNav overlay={config.siteCover}>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
                 <MenuButton
@@ -79,9 +79,9 @@ class IndexTemplate extends React.Component {
                   onClick={this.handleOnClick}
                 />
               </MainNav>
-              <div className="vertical">
+              <div className="vertical" style={{display: 'block'}}>
                 <div className="main-header-content inner">
-                  <PageTitle text={config.siteTitle} />
+                  <CenterImage src="/images/hufa-logo.png"/>
                   <PageDescription text={config.siteDescription} />
                   <SocialMediaIcons
                     urls={config.siteSocialUrls}
@@ -122,9 +122,9 @@ class IndexTemplate extends React.Component {
           {/* The tiny footer at the very bottom */}
           <Footer
             copyright={config.copyright}
-            promoteGatsby={config.promoteGatsby}
+            // promoteGatsby={config.promoteGatsby}
           />
-        </SiteWrapper>
+        </SiteWrapper> 
       </Drawer>
     );
   }

@@ -100,26 +100,26 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           limit: siteConfig.sitePaginationLimit
         });
 
-        // Creates Posts
-        createLinkedPages({
-          createPage,
-          edges: result.data.allMarkdownRemark.edges,
-          component: postPage,
-          edgeParser: edge => ({
-            path: edge.node.fields.slug,
-            context: {
-              slug: edge.node.fields.slug
-            }
-          }),
-          circular: true
-        });
+        // // Creates Posts
+        // createLinkedPages({
+        //   createPage,
+        //   edges: result.data.allMarkdownRemark.edges,
+        //   component: postPage,
+        //   edgeParser: edge => ({
+        //     path: edge.node.fields.slug,
+        //     context: {
+        //       slug: edge.node.fields.slug
+        //     }
+        //   }),
+        //   circular: true
+        // });
 
         // Creates Film Pages
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           if (node.frontmatter.category === 'film') {
             console.log('films' + node.fields.slug)
             createPage({
-              path: 'films' + node.fields.slug,
+              path: '/film' + node.fields.slug,
               component: path.resolve(`./src/templates/film.jsx`),
               context: {
                 // Data passed to context is available in page queries as GraphQL variables.
