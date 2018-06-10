@@ -189,7 +189,7 @@ th { padding: 0; }
    ========================================================================== */
 
 /* Import the font file with the icons in it */
-@font-face {
+/* @font-face {
     font-family: "casper-icons";
     src: url("../fonts/casper-icons.eot?v=1");
     src:
@@ -199,10 +199,10 @@ th { padding: 0; }
         url("../fonts/casper-icons.svg?v=1#icons") format("svg");
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 /* Apply these base styles to all icons */
-[class^="icon-"]::before,
+/* [class^="icon-"]::before,
 [class*=" icon-"]::before {
     font-family: "casper-icons", "Open Sans", sans-serif;
     speak: none;
@@ -214,11 +214,11 @@ th { padding: 0; }
     text-decoration: none !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
-.icon-ghost::before {
+/* .icon-ghost::before {
     content: "\f600";
 }
 
@@ -242,15 +242,16 @@ th { padding: 0; }
 .icon-stats::before {
     content: "\f606";
 }
+*/
 
-.icon-location::before {
+/* .icon-location::before {
     content: "\f607";
-    margin-left: -3px; /* Tracking fix */
-}
+    margin-left: -3px;
+} 
 
 .icon-link::before {
     content: "\f608";
-}
+} */
 
 /*
     IMPORTANT: When making any changes to the icon font, be sure to increment

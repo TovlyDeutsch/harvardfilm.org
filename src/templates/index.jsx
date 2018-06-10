@@ -81,7 +81,7 @@ class IndexTemplate extends React.Component {
               </MainNav>
               <div className="vertical" style={{display: 'block'}}>
                 <div className="main-header-content inner">
-                  <CenterImage src="/images/hufa-logo.png"/>
+                  <CenterImage src="/images/hufa-logo.svg"/>
                   <PageDescription text={config.siteDescription} />
                   <SocialMediaIcons
                     urls={config.siteSocialUrls}
