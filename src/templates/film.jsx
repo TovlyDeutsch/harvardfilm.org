@@ -93,6 +93,7 @@ class FilmTemplate extends React.Component {
                   <PostDate date={date} />
                   <PostTags prefix=" " tags={tags} />
                 </section>
+                <iframe className='film-video'/>
               </PostHeader>
               <PostFormatting className={className}>
               <section
