@@ -30,6 +30,17 @@
          url('../fonts/playfair-display-v13-latin-700.svg#PlayfairDisplay') format('svg'); /* Legacy iOS */
   }
 
+ /* playfair-display-400 - latin */
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Playfair Display'), local('PlayfairDisplay'),
+         url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/PlayfairDisplay-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+  }
+
 html {
     font-family: pb-regular, sans-serif;
     -ms-text-size-adjust: 100%;

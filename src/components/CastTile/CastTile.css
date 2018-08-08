@@ -1,8 +1,36 @@
 .cast-tile-name,
 .cast-tile-role {
   display: block;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.cast-tile-name {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  font-size: 20px;
+}
+.cast-tile-role {
+  font-family: pb-bold, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1.5px;
 }
 
 .cast-tile {
   width: 216px;
+  height: 270px;
+}
+
+.cast-tile:hover {
+  width: 216px;
+  height: 270px;
+}
+
+.cast-member-label {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

@@ -110,9 +110,8 @@ class FilmTemplate extends React.Component {
                 className="film-content"
                 dangerouslySetInnerHTML={{ __html: postNode.html }}
               />
-
+              {credits.length > 0 && <CastGrid cast={credits} />}
               <PostFooter>
-                {credits.length > 0 && <CastGrid cast={credits} />}
                 {/*<PostShare
                   postNode={postNode}
                   postPath={location.pathname}

@@ -8,7 +8,7 @@ class CastGrid extends React.Component {
     console.log(cast);
     if (cast.length > 0) {
       let castTiles = cast.map(member => <CastTile member={member} />);
-      return <div className="cast-grid">{castTiles}</div>;
+      return (<div><h2 className="cast-title">Cast</h2> <div className="cast-grid">{castTiles}</div></div >);
     }
     return null;
   }

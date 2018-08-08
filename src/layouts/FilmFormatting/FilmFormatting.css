@@ -13,9 +13,19 @@
   position: relative;
   width: 100%;
   margin: 0;
-  max-height: 100vh;
-  /* padding-bottom: 4rem; */
   word-wrap: break-word;
+}
+
+.film p {
+  margin-bottom: 12px;
+}
+.film h2 {
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.film .post-header {
+  margin-bottom: 18px;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .film
