@@ -6,15 +6,11 @@
     overflow: hidden;
 } */
 
+:root {
+  --iframe-width: 60vw;
+}
+
 .film-iframe {
-  width: 80vw;
-  height: 45vw;
-}
-
-@media only screen and (max-width: 900px) {
-
-}
-
-@media only screen and (max-width: 500px) {
-
+  width: var(--iframe-width);
+  height: calc(var(--iframe-width) * (9 / 16));
 }

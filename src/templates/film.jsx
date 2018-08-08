@@ -23,7 +23,8 @@ import PostTags from "../components/PostTags/PostTags";
 import Footer from "../components/Footer/Footer";
 import AuthorModel from "../models/author-model";
 import Disqus from "../components/Disqus/Disqus";
-import ProportionalVideo from '../components/ProportionalVideo/ProportionalVideo'
+import ProportionalVideo from "../components/ProportionalVideo/ProportionalVideo";
+import CastCarousel from "../components/CastCarousel/CastCarousel";
 
 class FilmTemplate extends React.Component {
   state = {
@@ -56,14 +57,24 @@ class FilmTemplate extends React.Component {
     const { location, data } = this.props;
     const { slug } = this.props.pathContext;
     const postNode = data.markdownRemark;
-    const post = postNode.frontmatter
+    const post = postNode.frontmatter;
     const { cover, title, date, author, tags, thumbnail, videoLink } = post;
+    let { credits } = post;
     const className = post.category ? post.category : "post";
     const authorData = AuthorModel.getAuthor(
       data.authors.edges,
       author,
       config.blogAuthorId
     );
+    credits = credits
+      .map(crewMemberPostData => ({
+        authorData: AuthorModel.getAuthor(
+          data.authors.edges,
+          crewMemberPostData.id
+        ),
+        postData: crewMemberPostData
+      }))
+      .filter(crewMember => crewMember.authorData && crewMember.postData);
 
     return (
       <Drawer className="post-template" isOpen={this.state.menuOpen}>
@@ -76,8 +87,8 @@ class FilmTemplate extends React.Component {
         <Navigation config={config} onClose={this.handleOnClose} />
 
         <SiteWrapper>
-          <MainHeader className="post-head" color='white'>
-              <MainNav>
+          <MainHeader className="post-head" color="white">
+            <MainNav>
               <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
               <MenuButton
                 navigation={config.siteNavigation}
@@ -93,7 +104,7 @@ class FilmTemplate extends React.Component {
                   <PostDate date={date} />
                   <PostTags prefix=" " tags={tags} />
                 </section>
-                <ProportionalVideo videoLink={videoLink}/>
+                <ProportionalVideo videoLink={videoLink} />
               </PostHeader>
               <section
                 className="film-content"
@@ -101,6 +112,7 @@ class FilmTemplate extends React.Component {
               />
 
               <PostFooter>
+                {credits.length > 0 && <CastCarousel cast={credits} />}
                 {/*<PostShare
                   postNode={postNode}
                   postPath={location.pathname}
@@ -111,7 +123,7 @@ class FilmTemplate extends React.Component {
               </PostFooter>
             </FilmFormatting>
           </MainContent>
-        {/*  <ReadNext next={getNextData()} prev={getPrevData()} />*/}
+          {/*  <ReadNext next={getNextData()} prev={getPrevData()} />*/}
 
           {/* The tiny footer at the very bottom */}
           <Footer
@@ -133,13 +145,13 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
+        author
         cover
         date
         category
         tags
         videoLink
         thumbnail
-        author
         credits {
           id
           role

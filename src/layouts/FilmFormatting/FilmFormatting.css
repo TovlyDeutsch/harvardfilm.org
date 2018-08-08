@@ -1,21 +1,21 @@
 .film-content {
-    position: relative;
-    width: 80%; 
-    max-width: 900px;
-    margin: 0 auto;
-    /* padding-bottom: 4rem; */
-    /* border-bottom: #ebf2f6 1px solid; */
-    word-wrap: break-word;
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  /* padding-bottom: 4rem; */
+  /* border-bottom: #ebf2f6 1px solid; */
+  word-wrap: break-word;
 }
 
 /* Every film, on every page, gets this style on its <article> tag */
 .film {
-    position: relative;
-    width: 100%; 
-    margin: 0;
-    max-height: 100vh;
-    /* padding-bottom: 4rem; */
-    word-wrap: break-word;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  max-height: 100vh;
+  /* padding-bottom: 4rem; */
+  word-wrap: break-word;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .film
@@ -36,81 +36,83 @@
 } */
 
 .film-title {
-    color: rgb(219, 219, 219);
-    margin-bottom: 0.2em;
+  color: #fff;
+  margin-bottom: 6px;
+  padding-top: 6px;
+  font-size: 42px;
 }
 
 .film-title a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Possibly not the right home for this, make sure to move sized versions as well */
 h1:not(.film-template) .film-title {
-    font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 
 div.page-template .film-title {
-    font-size: 5rem;
+  font-size: 24px;
 }
 
 .film-template .film-title,
 .page-template .film-title {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .film-excerpt p {
-    margin: 0;
-    font-size: 0.9em;
-    line-height: 1.7em;
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.7em;
 }
 
 .read-more {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .film-meta {
-    display: block;
-    margin: 1rem 0 2rem 0;
-    font-family: "Playfair Display", serif;
-    font-size: 1.3rem;
-    line-height: 2.2rem;
-    color: #9eabb3;
+  display: block;
+  margin: 6px 0 12px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  color: #9eabb3;
 }
 
 .film-meta a {
-    color: #9eabb3;
-    text-decoration: none;
+  color: #9eabb3;
+  text-decoration: none;
 }
 
 .film-meta a:hover {
-    color: #9eabb3;
-    text-decoration: underline;
+  color: #9eabb3;
+  text-decoration: underline;
 }
 
 .film-template .film-meta,
 .page-template .film-meta {
-    margin: 0;
+  margin: 0;
 }
 
 .film-template .film-date,
 .page-template .film-date {
-    padding: 0;
-    margin: 0;
-    border: none;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 /* Tweak the .film wrapper style */
 .film-template .film,
 .page-template .film {
-    margin-top: 0;
-    border-bottom: none;
-    padding-bottom: 0;
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 /* Kill that stylish little circle that was on the border, too */
 .film-template .film::after,
 .page-template .film::after {
-    display: none;
+  display: none;
 }
 
 /* ==========================================================================
@@ -118,17 +120,17 @@ div.page-template .film-title {
    ========================================================================== */
 
 @media only screen and (max-width: 900px) {
-    .film {
-        font-size: 0.95em;
-    }
+  .film {
+    font-size: 0.95em;
+  }
 
-    h1:not(.film-template) .film-title {
-        font-size: 3.2rem;
-    }
+  h1:not(.film-template) .film-title {
+    font-size: 3.2rem;
+  }
 
-    div.page-template .film-title {
-        font-size: 4.5rem;
-    }
+  div.page-template .film-title {
+    font-size: 4.5rem;
+  }
 }
 
 /* ==========================================================================
@@ -136,31 +138,31 @@ div.page-template .film-title {
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
-    .film {
-        width: auto;
-        padding-bottom: 2rem;
-        line-height: 1.65em;
-    }
+  .film {
+    width: auto;
+    padding-bottom: 2rem;
+    line-height: 1.65em;
+  }
 
-    h1:not(.film-template) .film-title {
-        font-size: 2.5rem;
-    }
+  h1:not(.film-template) .film-title {
+    font-size: 2.5rem;
+  }
 
-    div.page-template .film-title {
-        font-size: 2.8rem;
-    }
+  div.page-template .film-title {
+    font-size: 2.8rem;
+  }
 
-    .film-template .film-date,
-    .page-template .film-date {
-        display: inline-block;
-    }
+  .film-template .film-date,
+  .page-template .film-date {
+    display: inline-block;
+  }
 
-    .film-excerpt p {
-        font-size: 0.85em;
-    }
+  .film-excerpt p {
+    font-size: 0.85em;
+  }
 
-    .film-meta {
-        font-size: 1.3rem;
-        margin-top: 1rem;
-    }
+  .film-meta {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
 }

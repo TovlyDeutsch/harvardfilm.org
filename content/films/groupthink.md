@@ -14,7 +14,11 @@ credits:
   - id : 'patrick'
     role : 'The Professor'
     description : The professor appreciates diversity of opinion … when that opinion is his own.
+  - id : 'tovly'
+    role : 'audio'
+    description : descript
 ---
+
 ##Story
 
 An esteemed professor lectures to his class on the topic of groupthink. He presents some opinions on the subject, only to violate them in a bizzare manner.
