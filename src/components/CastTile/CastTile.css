@@ -2,3 +2,7 @@
 .cast-tile-role {
   display: block;
 }
+
+.cast-tile {
+  width: 216px;
+}

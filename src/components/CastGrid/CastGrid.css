@@ -1,0 +1,9 @@
+.cast-grid {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fit, 216px);
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: calc(200% / 3);
+}

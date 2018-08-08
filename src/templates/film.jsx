@@ -24,7 +24,7 @@ import Footer from "../components/Footer/Footer";
 import AuthorModel from "../models/author-model";
 import Disqus from "../components/Disqus/Disqus";
 import ProportionalVideo from "../components/ProportionalVideo/ProportionalVideo";
-import CastCarousel from "../components/CastCarousel/CastCarousel";
+import CastGrid from "../components/CastGrid/CastGrid";
 
 class FilmTemplate extends React.Component {
   state = {
@@ -112,7 +112,7 @@ class FilmTemplate extends React.Component {
               />
 
               <PostFooter>
-                {credits.length > 0 && <CastCarousel cast={credits} />}
+                {credits.length > 0 && <CastGrid cast={credits} />}
                 {/*<PostShare
                   postNode={postNode}
                   postPath={location.pathname}

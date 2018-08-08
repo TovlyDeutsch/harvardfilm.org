@@ -12,7 +12,7 @@ class CastTile extends React.Component {
     };
     if (name && role && image) {
       return (
-        <div style={tileStyle}>
+        <div style={tileStyle} className="cast-tile">
           <span className="cast-tile-name">{name}</span>
           <span className="cast-tile-role">{role}</span>
         </div>
