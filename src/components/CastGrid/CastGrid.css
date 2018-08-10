@@ -4,7 +4,13 @@
   grid-template-columns: repeat(auto-fit, 216px);
   justify-content: center;
   margin: auto;
-  max-width: calc(200% / 3);
+  width: 75%;
+}
+
+@media only screen and (max-width: 760px) {
+  .cast-grid {
+    width: 90%;
+  }
 }
 
 .cast-title {

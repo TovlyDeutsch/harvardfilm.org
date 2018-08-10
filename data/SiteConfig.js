@@ -4,12 +4,10 @@ module.exports = {
   blogAuthorId: "tovly", // The default and fallback author ID used for blog posts without a defined author.
   siteTitle: "HUFA", // Site title.
   siteTitleAlt: "Harvard Undergraduate Filmmakers Association", // Alternative site title for SEO.
-  siteLogo:
-    "/images/hufa-logo.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
+  siteLogo: "/images/hufa-logo.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "http://harvardfilm.org", // Domain of your website without pathPrefix.
   // pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
-  siteDescription:
-    "Harvard Undergraduate Filmmakers Association", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Harvard Undergraduate Filmmakers Association", // Website description used for RSS feeds/meta description tag.
   // siteCover:
   //   "/images/hufa-logo-with-background.png", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
@@ -20,11 +18,11 @@ module.exports = {
   googleAnalyticsID: "UA-111982167-1", // GA tracking ID.
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
-    'https://www.youtube.com/channel/UCdESCXwXAUwXUeME-Bqf-Lg',
+    "https://www.youtube.com/channel/UCdESCXwXAUwXUeME-Bqf-Lg",
     "https://twitter.com/gatsbyjs",
     "mailto:harvardfilmmaker@gmail.com"
   ],
-  postDefaultCategoryID: "Tech", // Default category for posts.
+  postDefaultCategoryID: "Film", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
   userLinks: [
     // {
@@ -37,11 +35,11 @@ module.exports = {
     //   url: "https://twitter.com/gatsbyjs",
     //   iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
     // },
-    // {
-    //   label: "Email",
-    //   url: "mailto:harvardfilmmaker@gmail.com",
-    //   iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
-    // }
+    {
+      label: "Contact",
+      url: "mailto:harvardfilmmaker@gmail.com",
+      iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
+    }
   ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: {

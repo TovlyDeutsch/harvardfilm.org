@@ -1,13 +1,13 @@
 .post-template .post-header,
 .page-template .post-header {
-    margin-bottom: 3.4rem;
-    text-align: center;
+  margin-bottom: 3.4rem;
+  text-align: center;
 }
 
 .post-opener {
-  background-size: 100% 85%;
   width: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ==========================================================================
@@ -15,8 +15,8 @@
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
-    .post-template .post-header,
-    .page-template .post-header {
-        margin-bottom: 2rem;
-    }
+  .post-template .post-header,
+  .page-template .post-header {
+    margin-bottom: 2rem;
+  }
 }

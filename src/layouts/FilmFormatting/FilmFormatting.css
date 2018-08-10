@@ -1,11 +1,14 @@
 .film-content {
   position: relative;
-  width: 80%;
-  max-width: 900px;
+  width: 60vw;
   margin: 0 auto;
-  /* padding-bottom: 4rem; */
-  /* border-bottom: #ebf2f6 1px solid; */
   word-wrap: break-word;
+}
+
+@media only screen and (max-width: 760px) {
+  .film-content {
+    width: 85vw;
+  }
 }
 
 /* Every film, on every page, gets this style on its <article> tag */

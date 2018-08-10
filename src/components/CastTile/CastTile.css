@@ -3,7 +3,7 @@
   display: block;
   margin: auto;
   text-align: center;
-  color: white;
+  color: #fff;
 }
 
 .cast-tile-name {
@@ -22,15 +22,30 @@
 .cast-tile {
   width: 216px;
   height: 270px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  filter: grayscale(80%);
+  cursor: pointer;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  transition: filter 1s;
 }
 
 .cast-tile:hover {
-  width: 216px;
-  height: 270px;
+  filter: grayscale(0%);
 }
+/* .cast-tile:hover .cast-tile-name {
+  color: white;
+  filter: brightness(10);
+} */
 
 .cast-member-label {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* .background-img {
+  width: 100%;
+  min-height: 100%;
+} */

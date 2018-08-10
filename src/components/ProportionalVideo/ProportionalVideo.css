@@ -8,6 +8,7 @@
 
 :root {
   --iframe-width: 60vw;
+  --md-iframe-width: 85vw;
 }
 
 .film-iframe {
@@ -17,7 +18,7 @@
 
 @media only screen and (max-width: 760px) {
   .film-iframe {
-    width: 90vw;
-    height: calc(90vw * (9 / 16));
+    width: var(--md-iframe-width);
+    height: calc(var(--md-iframe-width) * (9 / 16));
   }
 }
