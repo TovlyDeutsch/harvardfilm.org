@@ -1,71 +1,66 @@
-.opening_img {
-  min-width: 28rem;
-  max-width: 100vw;
-  margin: 0 auto;
-}
-
-.bottom_text {
-  font-size: 16px;
-  line-height: 1.7em;
-  color: rgba(0,0,0,0.5);
-  font-family: pb-regular;
-}
-.top_text {
-  font-size: 90px;
-  margin-bottom: 0;
-  color: black;
-}
-
-.film_for_all {
+.hero-container {
   max-width: 1300px;
   display: flex;
-  margin: auto;
   flex-wrap: wrap-reverse;
   box-sizing: border-box;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin: 18px auto;
 }
 
-.right_text {
-  max-width: 600px;
-  margin: 0 auto;
+.hero-img,
+.hero-text-wrapper {
+  width: 600px;
+  margin: 0 18px;
 }
 
-.top_text {
-  font-family: 'Playfair Display', serif;
+.hero-text-wrapper {
+  max-width: 90%;
+  text-align: left;
+}
+
+.hero-statement {
+  font-family: "Playfair Display", serif;
   font-weight: 700;
+  font-size: 90px;
+  margin-bottom: 0;
+  color: black;
+  text-align: left;
 }
 
-@media screen and (min-width: 1300px) {
-  .middle_text {
-    padding-top: 60px;
-    padding-bottom: 30px;
+.intro-subheading {
+  padding: 30px 0;
+  text-align: left;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.7em;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: pb-regular;
+}
+
+@media (max-width: 1272px) {
+  .intro-subheading {
+    padding: 6px 0;
+  }
+
+  .hero-text-wrapper h1,
+  .hero-text-wrapper h5 {
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 510px) {
-  .top_text {
-    font-size: 55px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .right_text {
-    max-width: 90vw;
-    margin: auto;
-  }
+@media (max-width: 720px) {
   .bottom_text {
     font-size: 15px;
   }
-  .opening_img {
-    min-width: 1rem;
-    max-width: 100%;
-    margin: 0 auto;
+  .hero-img {
+    width: 100%;
   }
-  .film_for_all {
-    max-width: 100%;
+}
+
+@media (max-width: 510px) {
+  .hero-statement {
+    font-size: 54px;
   }
-  .BelowTheFold {
-    margin: 10px 0;
-  }
- }
+}
