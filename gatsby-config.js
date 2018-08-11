@@ -40,6 +40,13 @@ module.exports = {
         path: `${__dirname}/content/${config.blogAuthorDir}`
       }
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "profile-pics",
+        path: `${__dirname}/content/profile-pics`
+      }
+    },
     "gatsby-transformer-json",
     {
       resolve: "gatsby-transformer-remark",
@@ -76,6 +83,8 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {

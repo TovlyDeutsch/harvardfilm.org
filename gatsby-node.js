@@ -40,10 +40,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     const indexPage = path.resolve("src/templates/index.jsx");
-    const postPage = path.resolve("src/templates/post.jsx");
+    // const postPage = path.resolve("src/templates/post.jsx");
     const filmPage = path.resolve("src/templates/film.jsx");
-    const tagPage = path.resolve("src/templates/tag.jsx");
-    const categoryPage = path.resolve("src/templates/category.jsx");
+    // const tagPage = path.resolve("src/templates/tag.jsx");
+    // const categoryPage = path.resolve("src/templates/category.jsx");
     const authorPage = path.resolve("src/templates/author.jsx");
 
     if (
@@ -116,18 +116,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         // Creates Film Pages
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          if (node.frontmatter.category === 'film') {
-            console.log('films' + node.fields.slug)
+          if (node.frontmatter.category === "film") {
+            console.log("films" + node.fields.slug);
             createPage({
-              path: '/film' + node.fields.slug,
+              path: "/film" + node.fields.slug,
               component: path.resolve(`./src/templates/film.jsx`),
               context: {
                 // Data passed to context is available in page queries as GraphQL variables.
-                slug: node.fields.slug,
-              },
-            })
+                slug: node.fields.slug
+              }
+            });
           }
-        })
+        });
 
         const tagSet = new Set();
         const tagMap = new Map();
@@ -155,33 +155,33 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         });
 
-        const tagFormatter = tag => route =>
-          `/tags/${_.kebabCase(tag)}/${route !== 1 ? route : ""}`;
-        const tagList = Array.from(tagSet);
-        tagList.forEach(tag => {
-          // Creates tag pages
-          createPaginationPages({
-            createPage,
-            edges: tagMap.get(tag),
-            component: tagPage,
-            pathFormatter: tagFormatter(tag),
-            limit: siteConfig.sitePaginationLimit,
-            context: {
-              tag
-            }
-          });
-        });
+        // const tagFormatter = tag => route =>
+        //   `/tags/${_.kebabCase(tag)}/${route !== 1 ? route : ""}`;
+        // const tagList = Array.from(tagSet);
+        // tagList.forEach(tag => {
+        //   // Creates tag pages
+        //   createPaginationPages({
+        //     createPage,
+        //     edges: tagMap.get(tag),
+        //     component: tagPage,
+        //     pathFormatter: tagFormatter(tag),
+        //     limit: siteConfig.sitePaginationLimit,
+        //     context: {
+        //       tag
+        //     }
+        //   });
+        // });
 
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
-            component: categoryPage,
-            context: {
-              category
-            }
-          });
-        });
+        // const categoryList = Array.from(categorySet);
+        // categoryList.forEach(category => {
+        //   createPage({
+        //     path: `/categories/${_.kebabCase(category)}/`,
+        //     component: categoryPage,
+        //     context: {
+        //       category
+        //     }
+        //   });
+        // });
 
         const authorList = Array.from(authorSet);
         authorList.forEach(author => {
