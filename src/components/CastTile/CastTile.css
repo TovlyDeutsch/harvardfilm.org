@@ -12,7 +12,7 @@
   font-size: 20px;
 }
 .cast-tile-role {
-  font-family: pb-bold, sans-serif;
+  /* font-family: pb-bold, sans-serif; */
   font-weight: bold;
   text-transform: uppercase;
   font-size: 10px;
@@ -34,18 +34,9 @@
 .cast-tile:hover {
   filter: grayscale(0%);
 }
-/* .cast-tile:hover .cast-tile-name {
-  color: white;
-  filter: brightness(10);
-} */
 
 .cast-member-label {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-
-/* .background-img {
-  width: 100%;
-  min-height: 100%;
-} */
