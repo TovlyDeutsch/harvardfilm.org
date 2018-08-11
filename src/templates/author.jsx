@@ -1,4 +1,5 @@
 import React from "react";
+import MenuTemplate from "./MenuTemplate";
 import Helmet from "react-helmet";
 import PostListing from "../components/PostListing/PostListing";
 import config from "../../data/SiteConfig";
@@ -20,33 +21,7 @@ import AuthorStats from "../components/AuthorStats/AuthorStats";
 import Footer from "../components/Footer/Footer";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 
-class AuthorTemplate extends React.Component {
-  state = {
-    menuOpen: false
-  };
-
-  handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  };
-
-  handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
-
-  openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
-
-  closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
-
+class AuthorTemplate extends MenuTemplate {
   render() {
     const { author, cover } = this.props.pathContext;
     const postEdges =

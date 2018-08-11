@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import MenuTemplate from "./MenuTemplate";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import MainHeader from "../layouts/MainHeader/MainHeader";
@@ -26,33 +27,7 @@ import Disqus from "../components/Disqus/Disqus";
 import ProportionalVideo from "../components/ProportionalVideo/ProportionalVideo";
 import CastGrid from "../components/CastGrid/CastGrid";
 
-class FilmTemplate extends React.Component {
-  state = {
-    menuOpen: false
-  };
-
-  handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  };
-
-  handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
-
-  openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
-
-  closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
-
+class FilmTemplate extends MenuTemplate {
   render() {
     const { location, data } = this.props;
     const { slug } = this.props.pathContext;

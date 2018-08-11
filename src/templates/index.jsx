@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { Link } from "react-scroll";
+import MenuTemplate from "./MenuTemplate";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
@@ -20,33 +21,7 @@ import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../layouts/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 
-class IndexTemplate extends React.Component {
-  state = {
-    menuOpen: false
-  };
-
-  handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  };
-
-  handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
-
-  openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
-
-  closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
-
+class IndexTemplate extends MenuTemplate {
   render() {
     const {
       nodes,
@@ -71,7 +46,7 @@ class IndexTemplate extends React.Component {
           {/* All the main content gets inserted here */}
           <div className="home-template">
             {/* The big featured header */}
-            <MainHeader cover={config.siteCover} color='#8a292e'>
+            <MainHeader cover={config.siteCover} color="#8a292e">
               <MainNav overlay={config.siteCover}>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
                 <MenuButton
@@ -79,9 +54,9 @@ class IndexTemplate extends React.Component {
                   onClick={this.handleOnClick}
                 />
               </MainNav>
-              <div className="vertical" style={{display: 'block'}}>
+              <div className="vertical" style={{ display: "block" }}>
                 <div className="main-header-content inner">
-                  <CenterImage src="/images/hufa-logo.png"/>
+                  <CenterImage src="/images/hufa-logo.png" />
                   <PageDescription text={config.siteDescription} />
                   <SocialMediaIcons
                     urls={config.siteSocialUrls}
@@ -101,8 +76,8 @@ class IndexTemplate extends React.Component {
               </Link>
             </MainHeader>
             <BelowTheFold>
-              <About/>
-              <WhatWeDo/>
+              <About />
+              <WhatWeDo />
             </BelowTheFold>
 
             {/* <PaginatedContent
@@ -113,8 +88,8 @@ class IndexTemplate extends React.Component {
               prev={prev}
               next={next}
             >*/}
-              {/* PostListing component renders all the posts */}
-              {/*<PostListing postEdges={nodes} postAuthors={authorsEdges} />
+            {/* PostListing component renders all the posts */}
+            {/*<PostListing postEdges={nodes} postAuthors={authorsEdges} />
             </PaginatedContent>
 */}
           </div>
@@ -124,7 +99,7 @@ class IndexTemplate extends React.Component {
             copyright={config.copyright}
             // promoteGatsby={config.promoteGatsby}
           />
-        </SiteWrapper> 
+        </SiteWrapper>
       </Drawer>
     );
   }
