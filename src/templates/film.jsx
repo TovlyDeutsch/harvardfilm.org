@@ -93,7 +93,6 @@ class FilmTemplate extends MenuTemplate {
                   config={config}
                 />*/}
                 <GhostSubscribe />
-                <Disqus postNode={postNode} />
               </PostFooter>
             </FilmFormatting>
           </MainContent>

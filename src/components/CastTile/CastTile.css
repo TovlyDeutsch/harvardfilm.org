@@ -1,18 +1,4 @@
-.cast-tile-name,
 .cast-tile-role {
-  display: block;
-  margin: auto;
-  text-align: center;
-  color: #fff;
-}
-
-.cast-tile-name {
-  font-family: "Playfair Display", serif;
-  font-weight: normal;
-  font-size: 20px;
-}
-.cast-tile-role {
-  /* font-family: pb-bold, sans-serif; */
   font-weight: bold;
   text-transform: uppercase;
   font-size: 10px;
@@ -22,21 +8,19 @@
 .cast-tile {
   width: 216px;
   height: 270px;
+  margin: auto;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  filter: grayscale(80%);
   cursor: pointer;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cast-tile-hover {
+  filter: grayscale(80%);
   transition: filter 1s;
 }
 
-.cast-tile:hover {
+.cast-tile-hover:hover {
   filter: grayscale(0%);
-}
-
-.cast-member-label {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }

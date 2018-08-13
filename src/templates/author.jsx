@@ -11,6 +11,7 @@ import MainNav from "../layouts/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import AuthorImage from "../components/AuthorImage/AuthorImage";
+import CastTile from "../components/CastTile/CastTile";
 import AuthorProfile from "../layouts/AuthorProfile/AuthorProfile";
 import AuthorName from "../components/AuthorName/AuthorName";
 import AuthorBio from "../components/AuthorBio/AuthorBio";
@@ -34,6 +35,7 @@ class AuthorTemplate extends MenuTemplate {
         ? this.props.data.allAuthorsJson.edges
         : [];
     const getAuthor = () => authorsEdges[0].node;
+    console.log(getAuthor());
 
     return (
       <Drawer className="author-template" isOpen={this.state.menuOpen}>
@@ -54,10 +56,7 @@ class AuthorTemplate extends MenuTemplate {
           </MainHeader>
 
           <AuthorProfile className="inner">
-            <AuthorImage
-              author={getAuthor()}
-              resolutions={this.props.data.imageOne.resolutions}
-            />
+            <CastTile member={{ authorData: getAuthor() }} />
             <AuthorName name={getAuthor().name} />
             <AuthorBio bio={getAuthor().bio} />
             <AuthorMeta>
