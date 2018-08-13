@@ -6,10 +6,10 @@ class AuthorStats extends React.Component {
     const getPostText = () => {
       if (postEdges) {
         return postEdges.length > 1
-          ? `${postEdges.length} posts`
-          : `${postEdges.length} post`;
+          ? `${postEdges.length} films`
+          : `${postEdges.length} film`;
       }
-      return "No posts";
+      return null;
     };
     return (
       <span className="author-stats">

@@ -34,31 +34,27 @@ class PostListing extends React.Component {
       <div>
         {/* This is the post loop - each post will be output using this markup */}
         {postList.map(post => {
-          const { title, path, excerpt, author, tags, date } = post;
-          const className = post.post_class ? post.post_class : "post";
-
+          const { title, path, excerpt, author, tags, date, cover } = post;
+          const className = post.post_class
+            ? post.post_class
+            : "post film-thumbnail-background";
+          console.log("thumbnail", post);
           return (
             <PostFormatting className={className} key={title}>
-              <PostHeader>
-                <h2 className="post-title">
+              <div className="film-listing-text">
+                <h2 className="film-list-title">
                   <Link to={path}>{title}</Link>
                 </h2>
-              </PostHeader>
-              <section className="post-excerpt">
-                {/* TODO limit excerpt to 26 words */}
-                <p>
-                  {excerpt}{" "}
-                  <Link className="read-more" to={path}>
-                    &raquo;
-                  </Link>
-                </p>
-              </section>
-              <footer className="post-meta">
-                <AuthorThumbnail avatar={author.image} name={author.name} />
-                <AuthorLink url={`/author/${author.id}`} name={author.name} />
-                <PostTags prefix=" on " tags={tags} />
-                <PostDate date={date} />
-              </footer>
+                <section className="post-excerpt">
+                  {/* TODO limit excerpt to 26 words */}
+                  <p>
+                    {excerpt}{" "}
+                    <Link className="read-more" to={path}>
+                      &raquo;
+                    </Link>
+                  </p>
+                </section>
+              </div>
             </PostFormatting>
           );
         })}

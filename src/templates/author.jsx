@@ -89,7 +89,9 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { author: { eq: $author } } }
+      filter: {
+        frontmatter: { author: { eq: $author }, category: { eq: "film" } }
+      }
     ) {
       totalCount
       edges {

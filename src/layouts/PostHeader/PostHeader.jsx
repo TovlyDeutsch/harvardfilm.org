@@ -9,7 +9,7 @@ class PostHeader extends React.Component {
         linear-gradient(
           rgba(0, 0, 0, 0.75) 0%,
           rgba(0, 0, 0, 0.75) 80%,
-          white 80%
+          #fff 80%
         ), 
         url(${thumbnail})`
     };

@@ -1,1 +1,36 @@
-/** empty css file for component consistency **/
+.film-list-title {
+  text-align: left;
+}
+
+.film-list-title a {
+  text-decoration: none;
+}
+
+/* .test {
+  background-image: linear-gradient(
+      to left,
+      rgba(36, 36, 36, 0.75) 0%,
+      rgba(163, 163, 163, 0.75) 50%,
+      rgba(254, 254, 254, 1) 100%
+    ),
+    url(/images/groupthink-thumbnail.png);
+  height: 250px;
+  background-size: cover;
+} */
+
+.film-thumbnail-background {
+  background-image: linear-gradient(
+      to left,
+      rgba(36, 36, 36, 0.75) 0%,
+      rgba(170, 170, 170, 0.75) 45%,
+      rgb(240, 240, 240) 90%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url(/images/groupthink-thumbnail.png);
+  height: 250px;
+  background-size: cover;
+}
+
+.film-listing-text {
+  width: 50%;
+}

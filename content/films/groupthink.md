@@ -1,6 +1,6 @@
 ---
 title: "Groupthink"
-cover: "/images/GroupthinkThumbnail.png"
+cover: "/images/groupthink-thumbnail.png"
 author: 'tovly'
 category: "film"
 date: "2018-01-03"
