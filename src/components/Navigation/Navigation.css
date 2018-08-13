@@ -76,7 +76,7 @@
     content: '';
     position: absolute;
 
-    /* top: 0; - duplicate inherited from original casper CSS */
+    /* top: 0; - duplicate inherited from original  CSS */
     width: 20px;
     height: 1px;
     background: rgb(150, 150, 150);
