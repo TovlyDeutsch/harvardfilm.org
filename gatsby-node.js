@@ -116,8 +116,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         // Creates Film Pages
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          console.log(node);
           if (node.frontmatter.category === "film") {
-            console.log("films" + node.fields.slug);
             createPage({
               path: "/film" + node.fields.slug,
               component: path.resolve(`./src/templates/film.jsx`),
@@ -183,8 +183,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         //   });
         // });
 
-        const authorList = Array.from(authorSet);
-        authorList.forEach(author => {
+        authorSet.forEach(author => {
           createPage({
             path: `/author/${_.kebabCase(author)}/`,
             component: authorPage,

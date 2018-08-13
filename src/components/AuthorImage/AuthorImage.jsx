@@ -7,7 +7,11 @@ class AuthorImage extends React.Component {
     const { name, image, url } = this.props.author;
     if (image) {
       return (
-        <Img className="author-img" src={image} alt={`${name}'s Picture`} />
+        <Img
+          className="author-img"
+          resolutions={this.props.resolutions}
+          alt={`${name}'s Picture`}
+        />
       );
     }
     return null;

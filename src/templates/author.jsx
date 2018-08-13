@@ -54,7 +54,10 @@ class AuthorTemplate extends MenuTemplate {
           </MainHeader>
 
           <AuthorProfile className="inner">
-            <AuthorImage author={getAuthor()} />
+            <AuthorImage
+              author={getAuthor()}
+              resolutions={this.props.data.imageOne.resolutions}
+            />
             <AuthorName name={getAuthor().name} />
             <AuthorBio bio={getAuthor().bio} />
             <AuthorMeta>
@@ -118,6 +121,11 @@ export const pageQuery = graphql`
           location
           socialUrls
         }
+      }
+    }
+    imageOne: imageSharp(id: { regex: "/one.jpg/" }) {
+      resolutions(width: 125, height: 125) {
+        ...GatsbyImageSharpResolutions
       }
     }
   }

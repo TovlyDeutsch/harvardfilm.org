@@ -43,8 +43,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "profile-pics",
-        path: `${__dirname}/content/profile-pics`
+        name: "images",
+        path: `${__dirname}/content/images`
       }
     },
     "gatsby-transformer-json",
