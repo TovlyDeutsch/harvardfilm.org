@@ -8,7 +8,10 @@ class AuthorImage extends React.Component {
     if (image) {
       return (
         <Img
-          className="author-img"
+          imgStyle={{
+            width: 216,
+            height: 270
+          }}
           resolutions={this.props.resolutions}
           alt={`${name}'s Picture`}
         />

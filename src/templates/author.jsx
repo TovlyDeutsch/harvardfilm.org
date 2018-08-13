@@ -124,8 +124,8 @@ export const pageQuery = graphql`
       }
     }
     imageOne: imageSharp(id: { regex: "/one.jpg/" }) {
-      resolutions(width: 125, height: 125) {
-        ...GatsbyImageSharpResolutions
+      resolutions(width: 432, height: 540) {
+        ...GatsbyImageSharpResolutions_tracedSVG
       }
     }
   }
