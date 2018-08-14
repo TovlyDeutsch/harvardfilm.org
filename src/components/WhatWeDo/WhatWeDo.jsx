@@ -11,10 +11,8 @@ class WhatWeDo extends Component {
             data={camera}
             type="image/svg+xml"
             className="icon"
-            alt="camera icon"
-          >
-            {" "}
-          </object>
+            aria-label="camera icon"
+          />
           <h6 className="service-name">Equipment Loans</h6>
           <p>
             We are in the process ofacquiring video equipment to loan to our
@@ -26,10 +24,8 @@ class WhatWeDo extends Component {
             data={camera}
             type="image/svg+xml"
             className="icon"
-            alt="camera icon"
-          >
-            {" "}
-          </object>
+            aria-label="camera icon"
+          />
           <h6 className="service-name">Create Films!</h6>
           <p>
             Our mission is to gather filmmakers at Harvard to create videos (of
@@ -41,10 +37,8 @@ class WhatWeDo extends Component {
             data={camera}
             type="image/svg+xml"
             className="icon"
-            alt="camera icon"
-          >
-            {" "}
-          </object>
+            aria-label="camera icon"
+          />
           <h6 className="service-name">Flexible Studio Space</h6>
           <p>
             We are looking in to securing a video studio somewhere on campus.
