@@ -1,4 +1,4 @@
-import React, { Component } from "../../../node_modules/@types/react/index";
+import React, { Component } from "react";
 import camera from "../../picture.svg";
 import "./WhatWeDo.css";
 
