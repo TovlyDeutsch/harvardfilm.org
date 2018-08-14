@@ -52,7 +52,12 @@ class Navigation extends Component {
       <div>
         <div className="nav">
           <h3 className="nav-title">Menu</h3>
-          <a href="#close" className="nav-close" onClick={onClose}>
+          <a
+            href="#close"
+            className="nav-close"
+            onClick={onClose}
+            aria-label="Close navigation menu"
+          >
             <span className="hidden">Close</span>
           </a>
           <ul>{navItems.map(mapToListParts)}</ul>

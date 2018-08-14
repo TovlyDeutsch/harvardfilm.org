@@ -7,7 +7,11 @@ class CenterImage extends React.Component {
     console.log(src);
     return (
       <div className="centerImageContainer">
-        <img src={src} style={{ width: "100%" }} />
+        <img
+          src={src}
+          style={{ width: "100%" }}
+          alt="Logo of the Harvard Undergraduate Filmmakers Association"
+        />
       </div>
     );
   }
