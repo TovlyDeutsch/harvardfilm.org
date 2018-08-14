@@ -4,7 +4,7 @@ module.exports = {
   blogAuthorId: "tovly", // The default and fallback author ID used for blog posts without a defined author.
   siteTitle: "HUFA", // Site title.
   siteTitleAlt: "Harvard Undergraduate Filmmakers Association", // Alternative site title for SEO.
-  siteLogo: "/img/hufa-logo.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
+  siteLogo: "/img/hufa-logo.svg", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "http://harvardfilm.org", // Domain of your website without pathPrefix.
   // pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: "Harvard Undergraduate Filmmakers Association", // Website description used for RSS feeds/meta description tag.

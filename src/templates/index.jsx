@@ -56,7 +56,7 @@ class IndexTemplate extends MenuTemplate {
               </MainNav>
               <div className="vertical" style={{ display: "block" }}>
                 <div className="main-header-content inner">
-                  <CenterImage src="img/hufa-logo.png" />
+                  <CenterImage src="img/hufa-logo.svg" />
                   <PageDescription text={config.siteDescription} />
                   <SocialMediaIcons
                     urls={config.siteSocialUrls}
