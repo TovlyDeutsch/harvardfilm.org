@@ -1,5 +1,5 @@
 import React from "react";
-import Flickity from "flickity";
+// import Flickity from "flickity";
 import "./CastInfo.css";
 
 class CastTile extends React.Component {
