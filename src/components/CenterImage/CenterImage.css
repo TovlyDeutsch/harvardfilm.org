@@ -2,4 +2,5 @@
   min-width: 200px;
   max-width: 40%;
   margin: auto;
+  transition: height 2s;
 }
