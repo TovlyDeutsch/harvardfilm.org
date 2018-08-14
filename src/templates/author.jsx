@@ -62,15 +62,14 @@ class AuthorTemplate extends MenuTemplate {
             <AuthorMeta>
               <AuthorLocation location={getAuthor().location} />
               <AuthorWebsite url={getAuthor().url} />
+              {/* Social information here */}
+              <SocialMediaIcons urls={getAuthor().socialUrls} />
             </AuthorMeta>
             <AuthorStats postEdges={postEdges} />
           </AuthorProfile>
 
           {/* PostListing component renders all the posts */}
           <PostListing postEdges={postEdges} postAuthors={authorsEdges} />
-
-          {/* Social information here */}
-          <SocialMediaIcons urls={getAuthor().socialUrls} />
 
           {/* The tiny footer at the very bottom */}
           <Footer

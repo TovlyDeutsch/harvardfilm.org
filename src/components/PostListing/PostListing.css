@@ -1,36 +1,32 @@
 .film-list-title {
   text-align: left;
+  word-wrap: normal;
 }
 
 .film-list-title a {
   text-decoration: none;
 }
 
-/* .test {
-  background-image: linear-gradient(
-      to left,
-      rgba(36, 36, 36, 0.75) 0%,
-      rgba(163, 163, 163, 0.75) 50%,
-      rgba(254, 254, 254, 1) 100%
-    ),
-    url(/images/groupthink-thumbnail.png);
-  height: 250px;
-  background-size: cover;
-} */
-
 .film-thumbnail-background {
-  background-image: linear-gradient(
-      to left,
-      rgba(36, 36, 36, 0.75) 0%,
-      rgba(170, 170, 170, 0.75) 45%,
-      rgb(240, 240, 240) 90%,
-      rgba(255, 255, 255, 1) 100%
-    ),
-    url(/images/groupthink-thumbnail.png);
   height: 250px;
   background-size: cover;
+  width: 80%;
+  max-width: 710px;
+  margin: 0 auto;
+  word-wrap: break-word;
 }
 
 .film-listing-text {
   width: 50%;
+}
+
+@media (max-width: 500px) {
+  .film-thumbnail-background {
+    width: 100%;
+  }
+  .film-listing-text {
+    width: 55%;
+    margin-left: 12px;
+    padding-top: 6px;
+  }
 }

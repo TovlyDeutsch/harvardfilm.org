@@ -41,10 +41,6 @@
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
-  .site-footer {
-    margin-top: 3rem;
-  }
-
   .post-template .site-footer,
   .page-template .site-footer {
     margin-top: 0;

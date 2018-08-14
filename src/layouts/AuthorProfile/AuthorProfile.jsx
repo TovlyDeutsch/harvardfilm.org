@@ -5,7 +5,7 @@ import "./AuthorProfile.css";
 class AuthorProfile extends React.Component {
   render() {
     const { children, className } = this.props;
-    const classes = classNames("author-profile", className);
+    const classes = classNames("author-profile mb-0", className);
 
     return <section className={classes}>{children}</section>;
   }

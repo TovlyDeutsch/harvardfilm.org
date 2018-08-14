@@ -31,23 +31,6 @@
   margin-bottom: 18px;
 }
 
-/* Add a little circle in the middle of the border-bottom on our .film
-   just for the lolz and stylepoints. */
-/* .film::after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #e7eef2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
-} */
-
 .film-title {
   color: #fff;
   margin-bottom: 6px;

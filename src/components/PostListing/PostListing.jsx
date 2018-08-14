@@ -37,22 +37,25 @@ class PostListing extends React.Component {
           const { title, path, excerpt, author, tags, date, cover } = post;
           const className = post.post_class
             ? post.post_class
-            : "post film-thumbnail-background";
-          console.log("thumbnail", post);
+            : "film-thumbnail-background";
+          const style = {
+            "background-image": `linear-gradient(
+              to left, rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.83) 75%,
+              rgb(255, 255, 255) 100%),
+            url(${cover})`
+          };
           return (
-            <PostFormatting className={className} key={title}>
+            <PostFormatting
+              className={className}
+              key={title}
+              style={style}
+              path={path}
+            >
               <div className="film-listing-text">
-                <h2 className="film-list-title">
-                  <Link to={path}>{title}</Link>
-                </h2>
+                <h2 className="film-list-title">{title}</h2>
                 <section className="post-excerpt">
-                  {/* TODO limit excerpt to 26 words */}
-                  <p>
-                    {excerpt}{" "}
-                    <Link className="read-more" to={path}>
-                      &raquo;
-                    </Link>
-                  </p>
+                  <p>{excerpt} &raquo;</p>
                 </section>
               </div>
             </PostFormatting>

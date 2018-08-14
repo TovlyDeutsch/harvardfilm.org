@@ -1,6 +1,7 @@
 ---
 title: "Big Test"
 cover: "https://unsplash.it/1280/900/?random?BigTest"
+thumbnail: "https://unsplash.it/1280/900/?random?BigTest"
 author: 'tovly'
 category: "film"
 date: "2018-01-03"

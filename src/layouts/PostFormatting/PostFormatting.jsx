@@ -1,10 +1,17 @@
 import React from "react";
+import Link from "gatsby-link";
 import "./PostFormatting.css";
 
 class PostFormatting extends React.Component {
   render() {
-    const { children, className } = this.props;
-    return <article className={className}>{children}</article>;
+    const { children, className, style, path } = this.props;
+    return (
+      <article className={className} style={style}>
+        <Link to={path} className="no-dec">
+          {children}
+        </Link>
+      </article>
+    );
   }
 }
 
