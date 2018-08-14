@@ -4,11 +4,12 @@ import "./CenterImage.css";
 class CenterImage extends React.Component {
   render() {
     const { width, src } = this.props;
+    console.log(src);
     return (
       <div className="centerImageContainer">
-        <img src={src} style={{width: '100%'}}/>
+        <img src={src} style={{ width: "100%" }} />
       </div>
-    )
+    );
   }
 }
 

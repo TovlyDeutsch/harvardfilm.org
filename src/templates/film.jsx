@@ -42,15 +42,18 @@ class FilmTemplate extends MenuTemplate {
       config.blogAuthorId
     );
     credits = credits
-      .map(crewMemberPostData => ({
-        authorData: AuthorModel.getAuthor(
-          data.authors.edges,
-          crewMemberPostData.id
-        ),
-        postData: crewMemberPostData
-      }))
-      .filter(crewMember => crewMember.authorData && crewMember.postData);
-
+      ? credits
+          .map(crewMemberPostData => ({
+            authorData: AuthorModel.getAuthor(
+              data.authors.edges,
+              crewMemberPostData.id
+            ),
+            postData: crewMemberPostData
+          }))
+          .filter(crewMember => crewMember.authorData && crewMember.postData)
+      : null;
+    credits = credits === null ? [] : credits;
+    console.log("here");
     return (
       <Drawer className="post-template" isOpen={this.state.menuOpen}>
         <Helmet>

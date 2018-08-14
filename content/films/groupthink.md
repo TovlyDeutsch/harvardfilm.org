@@ -1,6 +1,6 @@
 ---
 title: "Groupthink"
-cover: "/images/groupthink-thumbnail.png"
+cover: "/img/groupthink-thumbnail.png"
 author: 'tovly'
 category: "film"
 date: "2018-01-03"
@@ -9,7 +9,7 @@ tags:
     - drama
     - short-film
 videoLink: 'https://www.youtube.com/embed/T3jlDUCIFtE?rel=0'
-thumbnail: '/images/groupthink-thumbnail.png'
+thumbnail: '/img/groupthink-thumbnail.png'
 credits:
   - id : 'patrick'
     role : 'The Professor'
