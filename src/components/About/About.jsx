@@ -15,11 +15,11 @@ class About extends Component {
           />
         </figure>
         <div className="hero-text-wrapper">
-          <h1 className="hero-statement">Film for all</h1>
-          <h5 className="intro-subheading">
+          <h2 className="hero-statement">Film for all</h2>
+          <h3 className="intro-subheading">
             HUFA is fostering filmmaking at Harvard and the wider Boston
             community.
-          </h5>
+          </h3>
           <p className="hero-description">
             HUFA, founded in 2017, is dedicated to facilitating video production
             at Harvard via club-wide film projects, educational workshops,

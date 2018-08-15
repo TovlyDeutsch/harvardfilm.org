@@ -5,44 +5,47 @@ import "./WhatWeDo.css";
 class WhatWeDo extends Component {
   render() {
     return (
-      <section className="what_we_do">
-        <div className="activity_block">
-          <object
-            data={camera}
-            type="image/svg+xml"
-            className="icon"
-            aria-label="camera icon"
-          />
-          <h6 className="service-name">Equipment Loans</h6>
-          <p>
-            We are in the process ofacquiring video equipment to loan to our
-            members.
-          </p>
-        </div>
-        <div className="activity_block">
-          <object
-            data={camera}
-            type="image/svg+xml"
-            className="icon"
-            aria-label="camera icon"
-          />
-          <h6 className="service-name">Create Films!</h6>
-          <p>
-            Our mission is to gather filmmakers at Harvard to create videos (of
-            all genres)
-          </p>
-        </div>
-        <div className="activity_block">
-          <object
-            data={camera}
-            type="image/svg+xml"
-            className="icon"
-            aria-label="camera icon"
-          />
-          <h6 className="service-name">Flexible Studio Space</h6>
-          <p>
-            We are looking in to securing a video studio somewhere on campus.
-          </p>
+      <section>
+        <h2 className="home-header">What We Do</h2>
+        <div className="what_we_do">
+          <div className="activity_block">
+            <object
+              data={camera}
+              type="image/svg+xml"
+              className="icon"
+              aria-label="camera icon"
+            />
+            <h6 className="service-name">Equipment Loans</h6>
+            <p>
+              We are in the process ofacquiring video equipment to loan to our
+              members.
+            </p>
+          </div>
+          <div className="activity_block">
+            <object
+              data={camera}
+              type="image/svg+xml"
+              className="icon"
+              aria-label="camera icon"
+            />
+            <h6 className="service-name">Create Films!</h6>
+            <p>
+              Our mission is to gather filmmakers at Harvard to create videos
+              (of all genres)
+            </p>
+          </div>
+          <div className="activity_block">
+            <object
+              data={camera}
+              type="image/svg+xml"
+              className="icon"
+              aria-label="camera icon"
+            />
+            <h6 className="service-name">Flexible Studio Space</h6>
+            <p>
+              We are looking in to securing a video studio somewhere on campus.
+            </p>
+          </div>
         </div>
       </section>
     );

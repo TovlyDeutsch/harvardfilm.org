@@ -1,35 +1,53 @@
+:root {
+  --hero-text-wrapper-margin: 24px;
+
+  --hero-container-max-width: 1150px;
+  --hero-panel-width: calc(
+    (var(--hero-container-max-width) - var(--hero-text-wrapper-margin)) / 2
+  );
+  --hero-container-top-margin: 20px;
+
+  --hero-statement-font-size: 80px;
+
+  --subheading-vertical-margins: 6px;
+}
+
 .hero-container {
-  max-width: 1300px;
+  max-width: var(--hero-container-max-width);
   display: flex;
   flex-wrap: wrap-reverse;
   box-sizing: border-box;
   justify-content: center;
-  margin: 18px auto;
+  margin: var(--hero-container-top-margin) auto 0 auto;
 }
 
 .hero-img,
 .hero-text-wrapper {
-  width: 600px;
-  margin: 0 18px;
+  max-width: var(--hero-panel-width);
+  margin: 0;
 }
 
 .hero-text-wrapper {
-  max-width: 90%;
   text-align: left;
+  margin-left: var(--hero-text-wrapper-margin);
 }
 
 .hero-statement {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 90px;
+  font-size: var(--hero-statement-font-size);
   margin-bottom: 0;
   color: black;
   text-align: left;
+  letter-spacing: -2px;
+  text-indent: -3px;
 }
 
 .intro-subheading {
   padding: 30px 0;
   text-align: left;
+  font-size: 20px;
+  letter-spacing: calc(1em / 200);
 }
 
 .hero-description {
@@ -37,23 +55,50 @@
   line-height: 1.7em;
   color: rgba(0, 0, 0, 0.5);
   font-family: pb-regular;
+  margin: 0;
 }
 
-@media (max-width: 1272px) {
+.hero-img {
+  margin-top: 20px;
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --hero-container-max-width: 900px;
+  }
+
   .intro-subheading {
-    padding: 6px 0;
-  }
-
-  .hero-text-wrapper h1,
-  .hero-text-wrapper h5 {
-    text-align: center;
+    padding: var(--subheading-vertical-margins) 0;
   }
 }
 
-@media (max-width: 720px) {
-  .bottom_text {
-    font-size: 15px;
+@media (max-width: 1000px) {
+  :root {
+    --hero-container-max-width: 90vw;
+    --hero-statement-font-size: 70px;
   }
+
+  .intro-subheading {
+    padding: var(--subheading-vertical-margins) 0;
+  }
+}
+
+/* one block per row */
+@media (max-width: 760px) {
+  :root {
+    --hero-container-max-width: 1520px;
+    --hero-container-top-margin: 6px;
+  }
+
+  .hero-img {
+    margin-top: 18px;
+  }
+
+  .hero-text-wrapper {
+    margin: 0 auto;
+    max-width: 90vw;
+  }
+
   .hero-img {
     width: 100%;
   }

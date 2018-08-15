@@ -3,9 +3,9 @@
   position: relative;
   display: table;
   width: 100%;
-  height: 100vh;
-  padding-bottom: 18px;
-  margin-bottom: 50px;
+  /* height: 100vh; */
+  padding-bottom: 24px;
+  /* margin-bottom: 50px; */
   text-align: center;
   background: #222 no-repeat center center;
   background-size: cover;
@@ -131,7 +131,7 @@
 
     /* height: auto; Node: duplicate height values included in original Casper css */
     min-height: 240px;
-    height: 60vh;
+    /* height: 60vh; */
     /* padding: 15% 0; */
   }
 
@@ -173,7 +173,7 @@
 
 @media only screen and (max-width: 500px) {
   .main-header {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     height: 40vh;
   }
 
