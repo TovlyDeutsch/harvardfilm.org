@@ -1,0 +1,24 @@
+.sponsor-img {
+  width: 500px;
+  max-width: 90vw;
+  margin: 0 auto;
+  display: block;
+}
+
+/* .sponsors {
+  margin: 0;
+} */
+.home-sponsor-text {
+  margin: 0 auto;
+  max-width: 90vw;
+}
+
+.home-header {
+  margin: 12px auto 12px auto;
+  font-size: 44px;
+  color: black;
+}
+
+.home-sponsor-text {
+  text-align: center;
+}

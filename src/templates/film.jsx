@@ -23,7 +23,6 @@ import GhostSubscribe from "../components/GhostSubscribe/GhostSubscribe";
 import PostTags from "../components/PostTags/PostTags";
 import Footer from "../components/Footer/Footer";
 import AuthorModel from "../models/author-model";
-import Disqus from "../components/Disqus/Disqus";
 import ProportionalVideo from "../components/ProportionalVideo/ProportionalVideo";
 import CastGrid from "../components/CastGrid/CastGrid";
 
