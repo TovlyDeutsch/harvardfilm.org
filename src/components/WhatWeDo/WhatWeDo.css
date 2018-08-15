@@ -1,5 +1,6 @@
 .icon {
-  width: 1em;
+  width: 38px;
+  height: 38px;
 }
 
 .what_we_do {
@@ -21,7 +22,7 @@
 }
 
 .home-header {
-  margin: 0 auto;
+  margin: 12px auto 12px auto;
   font-size: 44px;
   color: black;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import camera from "../../picture.svg";
+// import camera from "../../picture.svg";
 import "./WhatWeDo.css";
 
 class WhatWeDo extends Component {
@@ -9,11 +9,11 @@ class WhatWeDo extends Component {
         <h2 className="home-header">What We Do</h2>
         <div className="what_we_do">
           <div className="activity_block">
-            <object
-              data={camera}
+            <img
+              src="img/clapperboard.svg"
               type="image/svg+xml"
               className="icon"
-              aria-label="camera icon"
+              alt="camera icon"
             />
             <h6 className="service-name">Equipment Loans</h6>
             <p>
@@ -22,11 +22,11 @@ class WhatWeDo extends Component {
             </p>
           </div>
           <div className="activity_block">
-            <object
-              data={camera}
+            <img
+              src="img/camera.svg"
               type="image/svg+xml"
               className="icon"
-              aria-label="camera icon"
+              alt="camera icon"
             />
             <h6 className="service-name">Create Films!</h6>
             <p>
@@ -35,11 +35,11 @@ class WhatWeDo extends Component {
             </p>
           </div>
           <div className="activity_block">
-            <object
-              data={camera}
+            <img
+              src="img/backdrop.png"
               type="image/svg+xml"
               className="icon"
-              aria-label="camera icon"
+              alt="camera icon"
             />
             <h6 className="service-name">Flexible Studio Space</h6>
             <p>
