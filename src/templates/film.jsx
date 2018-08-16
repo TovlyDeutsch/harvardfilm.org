@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import MenuTemplate from "./MenuTemplate";
 import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import config from "../../SiteConfig";
 import MainHeader from "../layouts/MainHeader/MainHeader";
 import MainNav from "../layouts/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";

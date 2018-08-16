@@ -2,7 +2,7 @@ import React from "react";
 import MenuTemplate from "./MenuTemplate";
 import Helmet from "react-helmet";
 import PostListing from "../components/PostListing/PostListing";
-import config from "../../data/SiteConfig";
+import config from "../../SiteConfig";
 import Drawer from "../layouts/Drawer/Drawer";
 import Navigation from "../components/Navigation/Navigation";
 import SiteWrapper from "../layouts/SiteWrapper/SiteWrapper";

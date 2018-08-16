@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import AuthorThumbnail from "../AuthorThumbnail/AuthorThumbnail";
 import PostTags from "../PostTags/PostTags";
-import SiteConfig from "../../../data/SiteConfig";
+import SiteConfig from "../../../SiteConfig";
 import AuthorLink from "../AuthorLink/AuthorLink";
 import PostFormatting from "../../layouts/PostFormatting/PostFormatting";
 import PostHeader from "../../layouts/PostHeader/PostHeader";

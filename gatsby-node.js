@@ -2,7 +2,7 @@ const path = require("path");
 const _ = require("lodash");
 const fs = require("fs");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
-const siteConfig = require("./data/SiteConfig");
+const siteConfig = require("./SiteConfig");
 const {
   createPaginationPages,
   createLinkedPages

@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import MenuTemplate from "./MenuTemplate";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import config from "../../SiteConfig";
 import Drawer from "../layouts/Drawer/Drawer";
 import Navigation from "../components/Navigation/Navigation";
 import About from "../components/About/About";
