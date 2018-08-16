@@ -1,8 +1,10 @@
 .sponsor-img {
   width: 500px;
   max-width: 90vw;
-  margin: 0 auto;
+  height: 140px;
+  margin: 0 auto 18px auto;
   display: block;
+  object-fit: cover;
 }
 
 .home-sponsor-text {
@@ -10,12 +12,10 @@
   max-width: 90vw;
 }
 
-.home-header {
-  margin: 12px auto 12px auto;
-  font-size: 60px;
-  color: black;
-}
-
 .home-sponsor-text {
   text-align: center;
+}
+
+.sponsor-desc {
+  margin: 0;
 }

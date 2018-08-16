@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { Link } from "react-scroll";
+import "./home.css";
 import MenuTemplate from "./MenuTemplate";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
@@ -19,20 +20,11 @@ import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import CenterImage from "../components/CenterImage/CenterImage";
 import PageDescription from "../components/PageDescription/PageDescription";
-import PaginatedContent from "../layouts/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 
 class IndexTemplate extends MenuTemplate {
   render() {
-    const {
-      nodes,
-      page,
-      pages,
-      total,
-      limit,
-      prev,
-      next
-    } = this.props.pathContext;
+    const { nodes } = this.props.pathContext;
     const authorsEdges = this.props.data.authors.edges;
 
     return (
@@ -76,31 +68,22 @@ class IndexTemplate extends MenuTemplate {
                 <span className="hidden">Scroll Down</span>
               </Link>
             </MainHeader>
-            <BelowTheFold>
-              <About />
-              <WhatWeDo />
-              <Sponsors />
-            </BelowTheFold>
-
-            {/* <PaginatedContent
-              page={page}
-              pages={pages}
-              total={total}
-              limit={limit}
-              prev={prev}
-              next={next}
-            >*/}
-            {/* PostListing component renders all the posts */}
-            {/*<PostListing postEdges={nodes} postAuthors={authorsEdges} />
-            </PaginatedContent>
-*/}
+            <About />
+            <hr />
+            <WhatWeDo />
+            <hr />
+            <Sponsors />
+            <hr />
+            <h2 className="home-header our-films">Our Films</h2>
+            <PostListing
+              postEdges={nodes}
+              postAuthors={authorsEdges}
+              limit={3}
+            />
           </div>
 
           {/* The tiny footer at the very bottom */}
-          <Footer
-            copyright={config.copyright}
-            // promoteGatsby={config.promoteGatsby}
-          />
+          <Footer copyright={config.copyright} />
         </SiteWrapper>
       </Drawer>
     );

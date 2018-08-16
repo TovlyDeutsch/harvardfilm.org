@@ -13,7 +13,7 @@ class Sponsors extends Component {
             alt="studypool logo"
           />
           <div className="home-sponsor-text">
-            <p>
+            <p className="sponsor-desc">
               <a
                 href="https://www.studypool.com/studyGuides"
                 target="_blank"
@@ -32,7 +32,8 @@ class Sponsors extends Component {
                 data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.studypool.com/studyGuides&amp;source=gmail&amp;ust=1526406473350000&amp;usg=AFQjCNGAzlAe9WCyBU4CRynjh4kzCqHw7g"
               >
                 Homework Answers
-              </a>&nbsp;at Studypool.
+              </a>
+              &nbsp;at Studypool.
             </p>
           </div>
         </div>
