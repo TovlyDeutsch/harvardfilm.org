@@ -20,6 +20,31 @@
   width: 50%;
 }
 
+.show-more-button {
+  display: block;
+  margin: 12px auto;
+  height: 38px;
+  padding: 0 15px;
+  border-style: solid;
+  border-width: 1px;
+  opacity: 1;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 35px;
+  white-space: nowrap;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+  background-color: #fff;
+  border-color: #111;
+  color: #000;
+}
+
+.show-more-button:hover {
+  background-color: #111;
+  color: #eee;
+}
+
 @media (max-width: 500px) {
   .film-thumbnail-background {
     width: 100%;

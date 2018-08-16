@@ -28,39 +28,48 @@ const getPostList = (postEdges, authorEdges) =>
 
 class PostListing extends React.Component {
   render() {
+    let filmList = [];
     const postList = getPostList(this.props.postEdges, this.props.postAuthors);
-
+    let limit = this.props.limit ? this.props.limit : postList.length;
+    for (let i = 0; i < limit; i++) {
+      const post = postList[i];
+      const { title, path, excerpt, author, tags, date, cover } = post;
+      const className = post.post_class
+        ? post.post_class
+        : "film-thumbnail-background";
+      const style = {
+        backgroundImage: `linear-gradient(
+          to left, rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.83) 75%,
+          rgb(255, 255, 255) 100%),
+        url(${cover})`
+      };
+      filmList.push(
+        <PostFormatting
+          className={className}
+          key={title}
+          style={style}
+          path={path}
+        >
+          <div className="film-listing-text">
+            <h2 className="film-list-title">{title}</h2>
+            <section className="post-excerpt">
+              <p>{excerpt} &raquo;</p>
+            </section>
+          </div>
+        </PostFormatting>
+      );
+    }
     return (
       <div>
         {/* This is the post loop - each post will be output using this markup */}
-        {postList.map(post => {
-          const { title, path, excerpt, author, tags, date, cover } = post;
-          const className = post.post_class
-            ? post.post_class
-            : "film-thumbnail-background";
-          const style = {
-            "background-image": `linear-gradient(
-              to left, rgba(255, 255, 255, 0) 0%,
-              rgba(255, 255, 255, 0.83) 75%,
-              rgb(255, 255, 255) 100%),
-            url(${cover})`
-          };
-          return (
-            <PostFormatting
-              className={className}
-              key={title}
-              style={style}
-              path={path}
-            >
-              <div className="film-listing-text">
-                <h2 className="film-list-title">{title}</h2>
-                <section className="post-excerpt">
-                  <p>{excerpt} &raquo;</p>
-                </section>
-              </div>
-            </PostFormatting>
-          );
-        })}
+        {filmList}
+        {limit < postList.length && (
+          <button className="show-more-button">
+            <span style={{ verticalAlign: "middle" }}>See more </span>
+            <span style={{ fontSize: 24, verticalAlign: "middle" }}>➜</span>
+          </button>
+        )}
       </div>
     );
   }
