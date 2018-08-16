@@ -5,9 +5,6 @@
   display: block;
 }
 
-/* .sponsors {
-  margin: 0;
-} */
 .home-sponsor-text {
   margin: 0 auto;
   max-width: 90vw;
@@ -15,7 +12,7 @@
 
 .home-header {
   margin: 12px auto 12px auto;
-  font-size: 44px;
+  font-size: 60px;
   color: black;
 }
 

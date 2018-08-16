@@ -21,12 +21,6 @@
   padding: 20px;
 }
 
-.home-header {
-  margin: 12px auto 12px auto;
-  font-size: 44px;
-  color: black;
-}
-
 @media (max-width: 1280px) {
   .what_we_do {
     max-width: 900px !important;
@@ -36,5 +30,10 @@
 @media (max-width: 1000px) {
   .what_we_do {
     max-width: 90vw !important;
+  }
+}
+@media (min-width: 650px) and (max-width: 1000px) {
+  .activity_block {
+    max-width: 25%;
   }
 }
