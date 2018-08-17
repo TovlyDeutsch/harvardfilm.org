@@ -14,6 +14,7 @@ import Sponsors from "../components/Sponsors/Sponsors";
 import BelowTheFold from "../layouts/BelowTheFold/BelowTheFold";
 import SiteWrapper from "../layouts/SiteWrapper/SiteWrapper";
 import Footer from "../components/Footer/Footer";
+import AuthorModel from "../models/author-model";
 import MainHeader from "../layouts/MainHeader/MainHeader";
 import MainNav from "../layouts/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
@@ -21,11 +22,23 @@ import MenuButton from "../components/MenuButton/MenuButton";
 import CenterImage from "../components/CenterImage/CenterImage";
 import PageDescription from "../components/PageDescription/PageDescription";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
+import CastGrid from "../components/CastGrid/CastGrid";
 
 class IndexTemplate extends MenuTemplate {
   render() {
     const { nodes } = this.props.pathContext;
     const authorsEdges = this.props.data.authors.edges;
+    // console.log(authorsEdges);
+    const credits = authorsEdges.map(authorEdge => {
+      const authorData = AuthorModel.getAuthor(
+        authorsEdges,
+        authorEdge.node.id
+      );
+      return {
+        authorData: authorData,
+        postData: { role: authorData.roles }
+      };
+    });
 
     return (
       <Drawer className="home-template" isOpen={this.state.menuOpen}>
@@ -80,6 +93,7 @@ class IndexTemplate extends MenuTemplate {
               postAuthors={authorsEdges}
               limit={3}
             />
+            {credits.length > 0 && <CastGrid cast={credits} />}
           </div>
 
           {/* The tiny footer at the very bottom */}
@@ -100,6 +114,7 @@ export const pageQuery = graphql`
         node {
           id
           name
+          roles
           image
           url
           bio

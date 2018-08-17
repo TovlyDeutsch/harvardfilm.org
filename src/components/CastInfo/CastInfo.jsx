@@ -5,7 +5,7 @@ import "./CastInfo.css";
 class CastTile extends React.Component {
   render() {
     const { name, role } = this.props;
-    if (name && role) {
+    if (name) {
       return (
         <div className="cast-member-label">
           <span className="cast-tile-name">{name}</span>

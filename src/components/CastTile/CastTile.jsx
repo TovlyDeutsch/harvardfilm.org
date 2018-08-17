@@ -7,6 +7,7 @@ class CastTile extends React.Component {
   render() {
     const { member, hover } = this.props;
     const { name, image } = member.authorData;
+    console.log(name);
     const role = member.postData ? member.postData.role : null;
     const tileStyle = {
       // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${image})`
@@ -18,7 +19,7 @@ class CastTile extends React.Component {
           style={tileStyle}
           className={classNames("cast-tile", { "cast-tile-hover": hover })}
         >
-          {name && role && <CastInfo name={name} role={role} />}
+          {name && <CastInfo name={name} role={role} />}
           {/* <img src={image} className="background-img" /> */}
         </div>
       );
