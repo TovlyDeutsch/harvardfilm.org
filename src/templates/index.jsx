@@ -11,7 +11,6 @@ import Navigation from "../components/Navigation/Navigation";
 import About from "../components/About/About";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import Sponsors from "../components/Sponsors/Sponsors";
-import BelowTheFold from "../layouts/BelowTheFold/BelowTheFold";
 import SiteWrapper from "../layouts/SiteWrapper/SiteWrapper";
 import Footer from "../components/Footer/Footer";
 import AuthorModel from "../models/author-model";

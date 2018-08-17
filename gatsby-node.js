@@ -31,6 +31,15 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
+
+    if (
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "category") &&
+      node.frontmatter.category === "film"
+    ) {
+      createNodeField({ node, name: "path", value: "film" + slug });
+    } else {
+      createNodeField({ node, name: "path", value: slug });
+    }
     createNodeField({ node, name: "slug", value: slug });
   }
 };
@@ -123,7 +132,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               component: path.resolve(`./src/templates/film.jsx`),
               context: {
                 // Data passed to context is available in page queries as GraphQL variables.
-                slug: node.fields.slug
+                slug: node.fields.slug,
+                path: "/film" + node.fields.slug
               }
             });
           }

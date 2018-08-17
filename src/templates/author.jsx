@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import PostListing from "../components/PostListing/PostListing";
 import config from "../../SiteConfig";
 import Drawer from "../layouts/Drawer/Drawer";
+import SEO from "../components/SEO/SEO";
 import Navigation from "../components/Navigation/Navigation";
 import SiteWrapper from "../layouts/SiteWrapper/SiteWrapper";
 import MainHeader from "../layouts/MainHeader/MainHeader";
@@ -24,7 +25,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 
 class AuthorTemplate extends MenuTemplate {
   render() {
-    const { author, cover } = this.props.pathContext;
+    const { author, cover, slug } = this.props.pathContext;
     const postEdges =
       this.props.data.allMarkdownRemark &&
       this.props.data.allMarkdownRemark.edges
@@ -40,6 +41,8 @@ class AuthorTemplate extends MenuTemplate {
     return (
       <Drawer className="author-template" isOpen={this.state.menuOpen}>
         <Helmet title={`Posts by "${author}" | ${config.siteTitle}`} />
+        {/* TODO make seo for authors better */}
+        <SEO postPath={slug} />
 
         {/* The blog navigation links */}
         <Navigation config={config} onClose={this.handleOnClose} />

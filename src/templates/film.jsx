@@ -135,6 +135,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        path
       }
     }
     # authors

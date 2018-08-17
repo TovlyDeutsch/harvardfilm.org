@@ -8,7 +8,7 @@ class CastGrid extends React.Component {
     console.log(cast);
     if (cast.length > 0) {
       let castTiles = cast.map(member => (
-        <CastTile member={member} hover={true} />
+        <CastTile member={member} hover={true} showInfo={true} />
       ));
       // TODO add loading animation
       return (

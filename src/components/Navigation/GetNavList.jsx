@@ -11,6 +11,11 @@ function GetNavList(config) {
     },
     {
       divider: true
+    },
+    {
+      primaryText: "Films",
+      component: Link,
+      to: "/films"
     }
   ];
 
@@ -27,12 +32,6 @@ function GetNavList(config) {
 
   NavList.push({ divider: true });
 
-  // NavList.push({
-  //   primaryText: "About",
-  //   // LeftIcon: <FontIcon>person</FontIcon>,
-  //   component: Link,
-  //   to: "/about/"
-  // });
   return NavList;
 }
 export default GetNavList;

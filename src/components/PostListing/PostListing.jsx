@@ -12,23 +12,27 @@ import "./PostListing.css";
 
 const getPostList = (postEdges, authorEdges) =>
   postEdges.map(postEdge => ({
-    path: postEdge.node.fields.slug,
+    path: postEdge.node.fields.path,
     tags: postEdge.node.frontmatter.tags,
     cover: postEdge.node.frontmatter.cover,
     title: postEdge.node.frontmatter.title,
     date: postEdge.node.frontmatter.date,
-    author: AuthorModel.getAuthor(
-      authorEdges,
-      postEdge.node.frontmatter.author,
-      SiteConfig.blogAuthorId
-    ),
+    // author: AuthorModel.getAuthor(
+    //   authorEdges,
+    //   postEdge.node.frontmatter.author,
+    //   SiteConfig.blogAuthorId
+    // ),
     excerpt: postEdge.node.excerpt,
     timeToRead: postEdge.node.timeToRead
   }));
 
 class PostListing extends React.Component {
+  defaultProps = {
+    postAuthors: []
+  };
   render() {
     let filmList = [];
+    console.log(this.props.postEdges);
     const postList = getPostList(this.props.postEdges, this.props.postAuthors);
     let limit = this.props.limit ? this.props.limit : postList.length;
     for (let i = 0; i < limit; i++) {
@@ -65,10 +69,12 @@ class PostListing extends React.Component {
         {/* This is the post loop - each post will be output using this markup */}
         {filmList}
         {limit < postList.length && (
-          <button className="show-more-button">
-            <span style={{ verticalAlign: "middle" }}>See more </span>
-            <span style={{ fontSize: 24, verticalAlign: "middle" }}>➜</span>
-          </button>
+          <Link to="/films" className="no-dec">
+            <button className="show-more-button">
+              <span style={{ verticalAlign: "middle" }}>See more </span>
+              <span style={{ fontSize: 24, verticalAlign: "middle" }}>➜</span>
+            </button>
+          </Link>
         )}
       </div>
     );

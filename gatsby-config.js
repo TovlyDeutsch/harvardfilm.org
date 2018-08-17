@@ -11,6 +11,7 @@ module.exports = {
       feed_url: config.siteUrl + pathPrefix + config.siteRss,
       title: config.siteTitle,
       description: config.siteDescription,
+      // TODO: FIX THIS
       image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
       author: config.siteRssAuthor,
       copyright: `${config.copyright.label} © ${config.copyright.year ||

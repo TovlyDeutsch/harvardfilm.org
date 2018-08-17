@@ -11,7 +11,7 @@
   height: 250px;
   background-size: cover;
   width: 80%;
-  max-width: 710px;
+  max-width: 1024px;
   margin: 0 auto;
   word-wrap: break-word;
 }
@@ -45,9 +45,11 @@
   color: #eee;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
   .film-thumbnail-background {
     width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
   .film-listing-text {
     width: 55%;

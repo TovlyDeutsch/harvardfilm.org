@@ -5,7 +5,7 @@ import "./CastTile.css";
 
 class CastTile extends React.Component {
   render() {
-    const { member, hover } = this.props;
+    const { member, hover, showInfo } = this.props;
     const { name, image } = member.authorData;
     console.log(name);
     const role = member.postData ? member.postData.role : null;
@@ -19,7 +19,7 @@ class CastTile extends React.Component {
           style={tileStyle}
           className={classNames("cast-tile", { "cast-tile-hover": hover })}
         >
-          {name && <CastInfo name={name} role={role} />}
+          {name && showInfo && <CastInfo name={name} role={role} />}
           {/* <img src={image} className="background-img" /> */}
         </div>
       );
