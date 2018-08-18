@@ -6,14 +6,15 @@ import "./CastTile.css";
 class CastTile extends React.Component {
   render() {
     const { member, hover, showInfo } = this.props;
-    const { name, image } = member.authorData;
-    console.log(name);
+    const { name } = member.authorData;
+    const { imageUrl } = member;
+    console.log(imageUrl);
     const role = member.postData ? member.postData.role : null;
     const tileStyle = {
       // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${image})`
-      backgroundImage: `url(${image})`
+      backgroundImage: `url(${imageUrl})`
     };
-    if (image) {
+    if (imageUrl) {
       return (
         <div
           style={tileStyle}

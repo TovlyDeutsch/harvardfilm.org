@@ -27,7 +27,12 @@ class IndexTemplate extends MenuTemplate {
   render() {
     const { nodes } = this.props.pathContext;
     const authorsEdges = this.props.data.authors.edges;
-    // console.log(authorsEdges);
+    const authorPics = {};
+    this.props.data.authorPics.edges.forEach(
+      edge =>
+        (authorPics[edge.node.name] = edge.node.childImageSharp.resize.src)
+    );
+    console.log(authorPics);
     const credits = authorsEdges.map(authorEdge => {
       const authorData = AuthorModel.getAuthor(
         authorsEdges,
@@ -35,7 +40,8 @@ class IndexTemplate extends MenuTemplate {
       );
       return {
         authorData: authorData,
-        postData: { role: authorData.roles }
+        postData: { role: authorData.roles },
+        imageUrl: authorPics[authorEdge.node.id]
       };
     });
 
@@ -117,6 +123,21 @@ export const pageQuery = graphql`
           image
           url
           bio
+        }
+      }
+    }
+    authorPics: allFile(
+      filter: { absolutePath: { regex: "/(profile-pics)/" } }
+    ) {
+      edges {
+        node {
+          name
+          publicURL
+          childImageSharp {
+            resize(width: 432, height: 540) {
+              src
+            }
+          }
         }
       }
     }
