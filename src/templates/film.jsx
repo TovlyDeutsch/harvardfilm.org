@@ -40,6 +40,11 @@ class FilmTemplate extends MenuTemplate {
       author,
       config.blogAuthorId
     );
+    const authorPics = {};
+    this.props.data.authorPics.edges.forEach(
+      edge =>
+        (authorPics[edge.node.name] = edge.node.childImageSharp.resize.src)
+    );
     credits = credits
       ? credits
           .map(crewMemberPostData => ({
@@ -47,7 +52,8 @@ class FilmTemplate extends MenuTemplate {
               data.authors.edges,
               crewMemberPostData.id
             ),
-            postData: crewMemberPostData
+            postData: crewMemberPostData,
+            imageUrl: authorPics[crewMemberPostData.id]
           }))
           .filter(crewMember => crewMember.authorData && crewMember.postData)
       : null;
@@ -147,6 +153,21 @@ export const pageQuery = graphql`
           image
           url
           bio
+        }
+      }
+    }
+    authorPics: allFile(
+      filter: { absolutePath: { regex: "/(profile-pics)/" } }
+    ) {
+      edges {
+        node {
+          name
+          publicURL
+          childImageSharp {
+            resize(width: 432, height: 540) {
+              src
+            }
+          }
         }
       }
     }

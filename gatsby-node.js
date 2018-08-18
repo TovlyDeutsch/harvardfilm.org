@@ -39,7 +39,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       Object.prototype.hasOwnProperty.call(node.frontmatter, "category") &&
       node.frontmatter.category === "film"
     ) {
-      createNodeField({ node, name: "path", value: "film" + slug });
+      createNodeField({ node, name: "path", value: "/film" + slug });
     } else {
       createNodeField({ node, name: "path", value: slug });
     }
@@ -89,6 +89,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   }
                   fields {
                     slug
+                    path
                   }
                   excerpt
                   timeToRead

@@ -106,6 +106,7 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            path
           }
           excerpt
           timeToRead

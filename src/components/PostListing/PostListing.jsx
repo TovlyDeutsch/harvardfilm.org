@@ -32,11 +32,12 @@ class PostListing extends React.Component {
   };
   render() {
     let filmList = [];
-    console.log(this.props.postEdges);
+    // console.log(this.props.postEdges);
     const postList = getPostList(this.props.postEdges, this.props.postAuthors);
     let limit = this.props.limit ? this.props.limit : postList.length;
     for (let i = 0; i < limit; i++) {
       const post = postList[i];
+      console.log("post", post);
       const { title, path, excerpt, author, tags, date, cover } = post;
       const className = post.post_class
         ? post.post_class

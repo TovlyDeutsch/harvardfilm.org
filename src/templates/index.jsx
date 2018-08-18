@@ -26,6 +26,7 @@ import CastGrid from "../components/CastGrid/CastGrid";
 class IndexTemplate extends MenuTemplate {
   render() {
     const { nodes } = this.props.pathContext;
+    console.log("nodes", nodes);
     const authorsEdges = this.props.data.authors.edges;
     const authorPics = {};
     this.props.data.authorPics.edges.forEach(
