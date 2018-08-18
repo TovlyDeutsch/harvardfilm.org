@@ -99,7 +99,11 @@ class IndexTemplate extends MenuTemplate {
               postAuthors={authorsEdges}
               limit={3}
             />
-            {credits.length > 0 && <CastGrid cast={credits} />}
+            {credits.length > 0 && <hr />}
+            {credits.length > 0 && (
+              <h2 className="home-header our-films">Members</h2>
+            )}
+            {credits.length > 0 && <CastGrid cast={credits} headerless />}
           </div>
 
           {/* The tiny footer at the very bottom */}

@@ -37,33 +37,35 @@ class PostListing extends React.Component {
     let limit = this.props.limit ? this.props.limit : postList.length;
     for (let i = 0; i < limit; i++) {
       const post = postList[i];
-      console.log("post", post);
-      const { title, path, excerpt, author, tags, date, cover } = post;
-      const className = post.post_class
-        ? post.post_class
-        : "film-thumbnail-background";
-      const style = {
-        backgroundImage: `linear-gradient(
-          to left, rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.83) 75%,
-          rgb(255, 255, 255) 100%),
-        url(${cover})`
-      };
-      filmList.push(
-        <PostFormatting
-          className={className}
-          key={title}
-          style={style}
-          path={path}
-        >
-          <div className="film-listing-text">
-            <h2 className="film-list-title">{title}</h2>
-            <section className="post-excerpt">
-              <p>{excerpt} &raquo;</p>
-            </section>
-          </div>
-        </PostFormatting>
-      );
+      if (post) {
+        console.log("post", post);
+        const { title, path, excerpt, author, tags, date, cover } = post;
+        const className = post.post_class
+          ? post.post_class
+          : "film-thumbnail-background";
+        const style = {
+          backgroundImage: `linear-gradient(
+            to left, rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.83) 75%,
+            rgb(255, 255, 255) 100%),
+          url(${cover})`
+        };
+        filmList.push(
+          <PostFormatting
+            className={className}
+            key={title}
+            style={style}
+            path={path}
+          >
+            <div className="film-listing-text">
+              <h2 className="film-list-title">{title}</h2>
+              <section className="post-excerpt">
+                <p>{excerpt} &raquo;</p>
+              </section>
+            </div>
+          </PostFormatting>
+        );
+      }
     }
     return (
       <div>
