@@ -123,6 +123,9 @@ export const pageQuery = graphql`
           image
           url
           bio
+          fields {
+            path
+          }
         }
       }
     }

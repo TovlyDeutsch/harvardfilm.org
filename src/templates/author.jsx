@@ -26,6 +26,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 class AuthorTemplate extends MenuTemplate {
   render() {
     const { author, cover, slug } = this.props.pathContext;
+    const { authorPic } = this.props.data;
     const postEdges =
       this.props.data.allMarkdownRemark &&
       this.props.data.allMarkdownRemark.edges
@@ -59,7 +60,12 @@ class AuthorTemplate extends MenuTemplate {
           </MainHeader>
 
           <AuthorProfile className="inner">
-            <CastTile member={{ authorData: getAuthor() }} />
+            <CastTile
+              member={{
+                authorData: getAuthor(),
+                imageUrl: authorPic.edges[0].node.childImageSharp.resize.src
+              }}
+            />
             <AuthorName name={getAuthor().name} />
             <AuthorBio bio={getAuthor().bio} />
             <AuthorMeta>
@@ -87,7 +93,7 @@ class AuthorTemplate extends MenuTemplate {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query AuthorPage($author: String) {
+  query AuthorPage($author: String, $imgPath: String) {
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -126,9 +132,17 @@ export const pageQuery = graphql`
         }
       }
     }
-    imageOne: imageSharp(id: { regex: "/one.jpg/" }) {
-      resolutions(width: 432, height: 540) {
-        ...GatsbyImageSharpResolutions_tracedSVG
+    authorPic: allFile(filter: { absolutePath: { regex: $imgPath } }) {
+      edges {
+        node {
+          name
+          publicURL
+          childImageSharp {
+            resize(width: 432, height: 540) {
+              src
+            }
+          }
+        }
       }
     }
   }

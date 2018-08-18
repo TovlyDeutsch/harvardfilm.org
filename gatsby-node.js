@@ -10,6 +10,9 @@ const {
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
+  if (node.internal.type === "AuthorsJson") {
+    createNodeField({ node, name: "path", value: "author/" + node.id });
+  }
   let slug;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
@@ -195,10 +198,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         authorSet.forEach(author => {
           createPage({
-            path: `/author/${_.kebabCase(author)}/`,
+            path: `/author/${author}/`,
             component: authorPage,
             context: {
-              author
+              author: author,
+              imgPath: `/(profile-pics\/${author})/`
             }
           });
         });
