@@ -1,25 +1,21 @@
 ---
 title: "Groupthink"
 cover: "/img/groupthink-thumbnail.png"
-author: 'tovly'
+author: "tovly"
 category: "film"
 date: "2018-01-03"
 slug: "Groupthink"
 tags:
-    - drama
-    - short-film
-videoLink: 'https://www.youtube.com/embed/T3jlDUCIFtE?rel=0'
-thumbnail: '/img/groupthink-thumbnail.png'
+  - drama
+  - short-film
+videoLink: "https://www.youtube.com/embed/T3jlDUCIFtE?rel=0"
+thumbnail: "/img/groupthink-thumbnail.png"
 credits:
-  - id : 'patrick'
-    role : 'The Professor'
-    description : The professor appreciates diversity of opinion … when that opinion is his own.
-  - id : 'tovly'
-    role : 'audio'
-    description : descript
-  - id : 'tovly'
-    role : 'audio'
-    description : descript
+  - id: "patrick"
+    role: "The Professor"
+    description: The professor appreciates diversity of opinion … when that opinion is his own.
+  - id: "tovly"
+    role: "Sound Mixer"
 ---
 
 ##Story
