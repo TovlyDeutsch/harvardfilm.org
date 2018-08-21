@@ -9,6 +9,7 @@ class ProportionalVideo extends React.Component {
         className="film-iframe"
         src={videoLink}
         frameBorder="0"
+        allow="encrypted-media"
         allowFullScreen
       />
     );

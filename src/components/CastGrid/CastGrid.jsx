@@ -13,7 +13,7 @@ class CastGrid extends React.Component {
       // TODO add loading animation
       return (
         <div>
-          {!headerless && <h2 className="cast-title">Cast</h2>}
+          {!headerless && <h2 className="cast-title">Cast & Crew</h2>}
           <div className="cast-grid">{castTiles}</div>
         </div>
       );
