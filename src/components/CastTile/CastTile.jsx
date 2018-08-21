@@ -15,7 +15,10 @@ class CastTile extends React.Component {
     const role = member.postData ? member.postData.role : null;
     const tileStyle = {
       // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${image})`
-      backgroundImage: `url(${imageUrl})`
+      backgroundImage: `linear-gradient(
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%),
+        url(${imageUrl})`
     };
     const linkWrap = component => (
       <Link to={`/author/${id}`} className="no-dec">
