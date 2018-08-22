@@ -4,7 +4,7 @@ cover: "/img/groupthink-thumbnail.png"
 author: "tovly"
 category: "film"
 date: "2018-01-03"
-slug: "Groupthink"
+slug: "groupthink"
 tags:
   - drama
   - short-film
