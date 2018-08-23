@@ -1,9 +1,12 @@
 {
   "id": "patrick",
-  "name": "Guinevere Kuiper",
-  "roles": "Writer, Director",
-  "image": "https://randomuser.me/api/portraits/women/17.jpg",
-  "url": "https://randomuser.me/api/?seed=user1",
-  "location": "Simpelveld, Groningen",
-  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet lorem nec ligula aliquet, porta blandit augue luctus. Vivamus ac quam diam. Sed vestibulum pharetra hendrerit."
+  "name": "Patrick Cressler",
+  "roles": "Screenwriter, Director, & Producer",
+  "url": "",
+  "location": "Cambridge, MA",
+  "bio": "As a cofounder of HUFA, Patrick exercises his passion for filmmaking as a screenwriter, director, and producer. Aside from filmmaking, he is a student of government and economics with a professional background in marketing and production.",
+  "socialUrls": [
+    "https://twitter.com/pcressl",
+    "https://www.linkedin.com/in/patrick-cressler-aa4964129/"
+  ]
 }

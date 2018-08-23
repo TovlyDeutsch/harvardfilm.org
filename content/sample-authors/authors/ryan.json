@@ -1,9 +1,12 @@
 {
   "id": "ryan",
   "name": "Ryan Chester",
-  "roles": "President, Director, Cinematographer, Editor",
+  "roles": "President, Cinematographer, Editor, Director",
   "url": "",
-  "location": "",
-  "bio": "I'm a cofounder of HUFA and ",
-  "socialUrls": []
+  "location": "Cambridge, MA & Cleveland, Ohio",
+  "bio": "As a cofounder of HUFA, Ryan",
+  "socialUrls": [
+    "https://twitter.com/pcressl",
+    "https://www.linkedin.com/in/patrick-cressler-aa4964129/"
+  ]
 }
