@@ -27,11 +27,23 @@ class AuthorTemplate extends MenuTemplate {
   render() {
     const { author, cover, slug } = this.props.pathContext;
     const { authorPic } = this.props.data;
-    const postEdges =
+    let postEdges =
       this.props.data.allMarkdownRemark &&
       this.props.data.allMarkdownRemark.edges
         ? this.props.data.allMarkdownRemark.edges
         : [];
+    // TODO: fix this convoluted mess
+    postEdges = postEdges.filter(edge => {
+      if (edge.node.frontmatter.credits) {
+        return (
+          edge.node.frontmatter.credits.findIndex(
+            credit => credit.id === author
+          ) !== -1
+        );
+      } else {
+        return false;
+      }
+    });
     const authorsEdges =
       this.props.data.allAuthorsJson && this.props.data.allAuthorsJson.edges
         ? this.props.data.allAuthorsJson.edges
@@ -97,9 +109,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: { author: { eq: $author }, category: { eq: "film" } }
-      }
+      filter: { frontmatter: { category: { eq: "film" } } }
     ) {
       totalCount
       edges {
@@ -117,6 +127,9 @@ export const pageQuery = graphql`
             date
             author
             synopsis
+            credits {
+              id
+            }
           }
         }
       }
