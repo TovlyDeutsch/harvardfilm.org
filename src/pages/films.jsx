@@ -41,7 +41,7 @@ class FilmPage extends MenuTemplate {
             </MainNav>
           </MainHeader>
           <MainContent>
-            <h1>Our Films</h1>
+            <h1 className="text-center">Our Films</h1>
             {/* TODO: add lazy loading when we start having a lot of films */}
             <PostListing postEdges={postEdges} />
           </MainContent>

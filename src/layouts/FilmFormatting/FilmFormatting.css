@@ -1,7 +1,7 @@
 .film-content {
   position: relative;
   width: 60vw;
-  margin: 0 auto;
+  margin: 0 auto 36px;
   word-wrap: break-word;
 }
 
@@ -9,6 +9,10 @@
   .film-content {
     width: 85vw;
   }
+}
+
+.film-content iframe {
+  padding: 18px auto;
 }
 
 /* Every film, on every page, gets this style on its <article> tag */

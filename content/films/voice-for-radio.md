@@ -15,6 +15,7 @@ synopsis: "Two radio hosts get on each other's nerves. A tussle ensues, and one 
 credits:
   - id: "joel"
     role: "Writer & Director"
+    description: ""
   - id: "ryan"
     role: "Cinematographer & Editor"
   - id: "tovly"
