@@ -51,12 +51,16 @@ class PostListing extends React.Component {
           cover,
           synopsis
         } = post;
-        let trimmedSynopsis = synopsis.substr(0, this.MAX_SYNOPSIS_LENGTH);
-        trimmedSynopsis =
-          trimmedSynopsis.substr(
-            0,
-            Math.min(trimmedSynopsis.length, trimmedSynopsis.lastIndexOf(" "))
-          ) + "...";
+        if (synopsis) {
+          let trimmedSynopsis = synopsis.slice(0, this.MAX_SYNOPSIS_LENGTH);
+          trimmedSynopsis =
+            trimmedSynopsis.slice(
+              0,
+              Math.min(trimmedSynopsis.length, trimmedSynopsis.lastIndexOf(" "))
+            ) + "...";
+        }
+        const displaySynopsis =
+          synopsis.length > 25 && trimmedSynopsis ? trimmedSynopsis : synopsis;
         // let shortSynopsis = synopsis ? synopsis.length > 25 : synopsis.slice(0, 26)
         const className = post.post_class
           ? post.post_class
