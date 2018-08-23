@@ -34,7 +34,7 @@ class PostListing extends React.Component {
       <div>
         {/* This is the post loop - each post will be output using this markup */}
         {postList.map(post => {
-          const { title, path, excerpt, author, tags, date } = post;
+          const { title, path, excerpt, author, tags, date, synopsis } = post;
           const className = post.post_class ? post.post_class : "post";
 
           return (
@@ -47,7 +47,7 @@ class PostListing extends React.Component {
               <section className="post-excerpt">
                 {/* TODO limit excerpt to 26 words */}
                 <p>
-                  {excerpt}{" "}
+                  {synopsis}
                   <Link className="read-more" to={path}>
                     &raquo;
                   </Link>
