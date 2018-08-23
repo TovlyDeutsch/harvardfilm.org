@@ -116,6 +116,7 @@ export const pageQuery = graphql`
             cover
             date
             author
+            synopsis
           }
         }
       }

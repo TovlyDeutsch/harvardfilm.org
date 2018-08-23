@@ -10,6 +10,7 @@ tags:
   - short-film
 videoLink: "https://www.youtube.com/embed/T3jlDUCIFtE?rel=0"
 thumbnail: "/img/groupthink-thumbnail.png"
+synopsis: "An esteemed professor lectures to his class on the topic of groupthink. He presents some opinions on the subject, only to violate them in a bizzare manner."
 credits:
   - id: "patrick"
     role: "The Professor"
@@ -21,3 +22,6 @@ credits:
 ##Story
 
 An esteemed professor lectures to his class on the topic of groupthink. He presents some opinions on the subject, only to violate them in a bizzare manner.
+
+##The Making of "Groupthink"
+"Groupthink" was the first

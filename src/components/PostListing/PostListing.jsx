@@ -17,6 +17,7 @@ const getPostList = (postEdges, authorEdges) =>
     cover: postEdge.node.frontmatter.cover,
     title: postEdge.node.frontmatter.title,
     date: postEdge.node.frontmatter.date,
+    synopsis: postEdge.node.frontmatter.synopsis,
     // author: AuthorModel.getAuthor(
     //   authorEdges,
     //   postEdge.node.frontmatter.author,
@@ -34,12 +35,29 @@ class PostListing extends React.Component {
     let filmList = [];
     // console.log(this.props.postEdges);
     const postList = getPostList(this.props.postEdges, this.props.postAuthors);
+    console.log("plist", postList);
     let limit = this.props.limit ? this.props.limit : postList.length;
     for (let i = 0; i < limit; i++) {
       const post = postList[i];
       if (post) {
         console.log("post", post);
-        const { title, path, excerpt, author, tags, date, cover } = post;
+        const {
+          title,
+          path,
+          excerpt,
+          author,
+          tags,
+          date,
+          cover,
+          synopsis
+        } = post;
+        let trimmedSynopsis = synopsis.substr(0, this.MAX_SYNOPSIS_LENGTH);
+        trimmedSynopsis =
+          trimmedSynopsis.substr(
+            0,
+            Math.min(trimmedSynopsis.length, trimmedSynopsis.lastIndexOf(" "))
+          ) + "...";
+        // let shortSynopsis = synopsis ? synopsis.length > 25 : synopsis.slice(0, 26)
         const className = post.post_class
           ? post.post_class
           : "film-thumbnail-background";
@@ -60,7 +78,7 @@ class PostListing extends React.Component {
             <div className="film-listing-text">
               <h2 className="film-list-title">{title}</h2>
               <section className="post-excerpt">
-                <p>{excerpt} &raquo;</p>
+                <p>{trimmedSynopsis} &raquo;</p>
               </section>
             </div>
           </PostFormatting>
