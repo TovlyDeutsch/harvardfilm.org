@@ -86,6 +86,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     date
                     category
                     author
+                    synopsis
+                    credits {
+                      id
+                      role
+                    }
                   }
                   fields {
                     slug
@@ -131,13 +136,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           console.log(node);
           if (node.frontmatter.category === "film") {
+            console.log(`${node.fields.slug}/`);
             createPage({
               path: "/film" + node.fields.slug,
               component: path.resolve(`./src/templates/film.jsx`),
               context: {
                 // Data passed to context is available in page queries as GraphQL variables.
                 slug: node.fields.slug,
-                path: "/film" + node.fields.slug
+                path: "/film" + node.fields.slug,
+                regexSlug: `${node.fields.slug}/`
               }
             });
           }
@@ -166,6 +173,13 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
           if (edge.node.frontmatter.author) {
             authorSet.add(edge.node.frontmatter.author);
+          }
+          // TODO: add validation to ensure author exists
+          if (edge.node.frontmatter.credits) {
+            console.log(edge.node.frontmatter.credits);
+            edge.node.frontmatter.credits.forEach(credit =>
+              authorSet.add(credit.id)
+            );
           }
         });
 
