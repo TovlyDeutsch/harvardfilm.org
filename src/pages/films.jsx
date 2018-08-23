@@ -21,6 +21,7 @@ class FilmPage extends MenuTemplate {
       this.props.data.allMarkdownRemark.edges
         ? this.props.data.allMarkdownRemark.edges
         : [];
+    console.log("pedges", postEdges);
     return (
       <Drawer className="post-template" isOpen={this.state.menuOpen}>
         <Helmet title={`Films by | ${config.siteTitle}`} />
@@ -81,6 +82,7 @@ export const pageQuery = graphql`
             cover
             date
             author
+            synopsis
           }
         }
       }
