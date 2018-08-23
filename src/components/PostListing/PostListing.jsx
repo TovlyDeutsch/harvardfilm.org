@@ -51,6 +51,8 @@ class PostListing extends React.Component {
           cover,
           synopsis
         } = post;
+        // TODO: refactor this synopsis section
+        let displaySynopsis = synopsis;
         if (synopsis) {
           let trimmedSynopsis = synopsis.slice(0, this.MAX_SYNOPSIS_LENGTH);
           trimmedSynopsis =
@@ -58,9 +60,12 @@ class PostListing extends React.Component {
               0,
               Math.min(trimmedSynopsis.length, trimmedSynopsis.lastIndexOf(" "))
             ) + "...";
+          displaySynopsis =
+            synopsis.length > 25 && trimmedSynopsis
+              ? trimmedSynopsis
+              : synopsis;
         }
-        const displaySynopsis =
-          synopsis.length > 25 && trimmedSynopsis ? trimmedSynopsis : synopsis;
+
         // let shortSynopsis = synopsis ? synopsis.length > 25 : synopsis.slice(0, 26)
         const className = post.post_class
           ? post.post_class
