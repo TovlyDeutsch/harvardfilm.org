@@ -19,27 +19,11 @@
   word-wrap: break-word;
 }
 
-.film p {
-  margin-bottom: 12px;
-}
-.film h2 {
-  margin-bottom: 12px;
-  margin-top: 0;
-}
-
-.film .post-header {
-  margin-bottom: 18px;
-}
-
 .film-title {
   color: #fff;
-  margin-bottom: 6px;
-  padding-top: 6px;
+  padding: 6px 0;
+  margin: 0;
   font-size: 42px;
-}
-
-.film-title a {
-  text-decoration: none;
 }
 
 /* Possibly not the right home for this, make sure to move sized versions as well */
@@ -96,20 +80,6 @@ div.page-template .film-title {
   padding: 0;
   margin: 0;
   border: none;
-}
-
-/* Tweak the .film wrapper style */
-.film-template .film,
-.page-template .film {
-  margin-top: 0;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-/* Kill that stylish little circle that was on the border, too */
-.film-template .film::after,
-.page-template .film::after {
-  display: none;
 }
 
 /* ==========================================================================
