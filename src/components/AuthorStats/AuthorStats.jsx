@@ -11,11 +11,15 @@ class AuthorStats extends React.Component {
       }
       return null;
     };
-    return (
-      <span className="author-stats">
-        <i className="icon-stats" /> {getPostText()}
-      </span>
-    );
+    if (postEdges.length > 0) {
+      return (
+        <span className="author-stats">
+          <i className="icon-stats" /> {getPostText()}
+        </span>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
