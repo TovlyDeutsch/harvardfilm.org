@@ -87,7 +87,7 @@ class PostListing extends React.Component {
             <div className="film-listing-text">
               <h2 className="film-list-title">{title}</h2>
               <section className="post-excerpt">
-                <p>{trimmedSynopsis} &raquo;</p>
+                <p>{displaySynopsis} &raquo;</p>
               </section>
             </div>
           </PostFormatting>
