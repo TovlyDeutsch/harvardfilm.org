@@ -22,6 +22,8 @@ credits:
     role: "Boom Operator"
   - id: "hae-in"
     role: "BTS Videographer"
+  - id: "patrick"
+    role: "Producer"
 ---
 
 ##Behind The Scenes
