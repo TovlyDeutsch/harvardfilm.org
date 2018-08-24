@@ -29,11 +29,12 @@ import CastGrid from "../components/CastGrid/CastGrid";
 class FilmTemplate extends MenuTemplate {
   render() {
     const { location, data } = this.props;
-    const { slug } = this.props.pathContext;
+    const { slug, filmPic } = this.props.pathContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
-    const { cover, title, date, author, tags, thumbnail, videoLink } = post;
+    const { title, date, author, tags, thumbnail, videoLink } = post;
     let { credits } = post;
+    console.log("filmpic", filmPic);
     const className = post.category ? post.category : "post";
     const authorData = AuthorModel.getAuthor(
       data.authors.edges,
@@ -119,7 +120,7 @@ class FilmTemplate extends MenuTemplate {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query FilmBySlug($slug: String!) {
+  query FilmBySlug($slug: String!, $regexSlug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
@@ -133,6 +134,7 @@ export const pageQuery = graphql`
         tags
         videoLink
         thumbnail
+        synopsis
         credits {
           id
           role
@@ -159,6 +161,19 @@ export const pageQuery = graphql`
     authorPics: allFile(
       filter: { absolutePath: { regex: "/(profile-pics)/" } }
     ) {
+      edges {
+        node {
+          name
+          publicURL
+          childImageSharp {
+            resize(width: 432, height: 540) {
+              src
+            }
+          }
+        }
+      }
+    }
+    filmPic: allFile(filter: { absolutePath: { regex: $regexSlug } }) {
       edges {
         node {
           name
