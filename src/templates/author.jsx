@@ -48,8 +48,11 @@ class AuthorTemplate extends MenuTemplate {
       this.props.data.allAuthorsJson && this.props.data.allAuthorsJson.edges
         ? this.props.data.allAuthorsJson.edges
         : [];
+
+    if (!authorsEdges[0]) {
+      return null;
+    }
     const getAuthor = () => authorsEdges[0].node;
-    console.log(getAuthor());
 
     return (
       <Drawer className="author-template" isOpen={this.state.menuOpen}>
