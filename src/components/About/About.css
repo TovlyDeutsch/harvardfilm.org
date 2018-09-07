@@ -7,7 +7,7 @@
   );
   --hero-container-top-margin: 20px;
 
-  --hero-statement-font-size: 80px;
+  --hero-statement-font-size: 50px;
 
   --subheading-vertical-margins: 6px;
 }
@@ -75,7 +75,7 @@
 @media (max-width: 1000px) {
   :root {
     --hero-container-max-width: 90vw;
-    --hero-statement-font-size: 70px;
+    --hero-statement-font-size: 50px;
   }
 
   .intro-subheading {
@@ -106,6 +106,6 @@
 
 @media (max-width: 510px) {
   .hero-statement {
-    font-size: 54px;
+    font-size: 50px;
   }
 }

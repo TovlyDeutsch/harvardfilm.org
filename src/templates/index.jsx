@@ -87,6 +87,18 @@ class IndexTemplate extends MenuTemplate {
                 <span className="hidden">Scroll Down</span>
               </Link>
             </MainHeader>
+            <h1 className="announcements" style={{ textAlign: "center" }}>
+              Announcements
+            </h1>
+            <p
+              className="announcements-description"
+              style={{ textAlign: "center" }}
+            >
+              Our first introductory meeting is this Sunday 9/9 at 3:30 in Sever
+              102? If you can't attend, sign up for our email list here:
+              https://lists.hcs.harvard.edu/mailman/listinfo/hufa-list. Keep an
+              eye out for a questionnaire about your interest in the club.
+            </p>
             <About />
             <hr />
             <WhatWeDo />
