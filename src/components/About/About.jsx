@@ -15,24 +15,25 @@ class About extends Component {
           />
         </figure>
         <div className="hero-text-wrapper">
-          <h2 className="hero-statement">Film for all</h2>
+          <h2 className="hero-statement">About Us</h2>
           <h3 className="intro-subheading">
-            HUFA is fostering filmmaking at Harvard and the wider Boston
-            community.
+            HUFA is fostering a fun and inclusive filmmaking community on
+            Harvard's campus.
           </h3>
           <p className="hero-description">
-            HUFA, founded in 2017, is dedicated to facilitating video production
+            HUFA, founded in 2017, is dedicated to facilitating film production
             at Harvard via club-wide film projects, educational workshops,
             feedback sessions among other programming. Early ideation for the
             club began in 2016 and we were approved as a provisional recognized
-            student organization in the Fall of 2017. We are steadily entering{" "}
+            student organization in the Fall of 2017. We have entered{" "}
             <a href="https://www.youtube.com/watch?v=T3jlDUCIFtE">
-              film competitions
-            </a>&nbsp;and planning our first 48-hour Film Festival for the Arts
-            First Weekend this Spring. We are continually seeking sponsorship to
-            grow and support our up-and-coming club. If you’re a student,
-            company, or anyone interested in the future of filmmaking, please
-            get in touch!
+              multiple film competitions
+            </a>
+            &nbsp;hosted our first 48-hour Film Festival for the Arts First
+            Weekend in Spring 2018. We are continually seeking new members from
+            diverse backgrounds to grow and improve our up-and-coming club. If
+            you’re a student, company, or anyone interested in the future of
+            filmmaking at Harvard, please get in touch!
           </p>
           {/*
           <div className="view_more_button">
