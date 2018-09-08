@@ -35,12 +35,10 @@ class PostListing extends React.Component {
     let filmList = [];
     // console.log(this.props.postEdges);
     const postList = getPostList(this.props.postEdges, this.props.postAuthors);
-    console.log("plist", postList);
     let limit = this.props.limit ? this.props.limit : postList.length;
     for (let i = 0; i < limit; i++) {
       const post = postList[i];
       if (post) {
-        console.log("post", post);
         const {
           title,
           path,
@@ -66,7 +64,6 @@ class PostListing extends React.Component {
               : synopsis;
         }
 
-        // let shortSynopsis = synopsis ? synopsis.length > 25 : synopsis.slice(0, 26)
         const className = post.post_class
           ? post.post_class
           : "film-thumbnail-background";

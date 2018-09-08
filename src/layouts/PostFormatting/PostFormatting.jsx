@@ -7,11 +7,11 @@ class PostFormatting extends React.Component {
     const { children, className, style, path } = this.props;
     console.log("true path", path);
     return (
-      <article className={className} style={style}>
-        <Link to={path} className="no-dec">
+      <Link to={path} className="no-dec">
+        <article className={className} style={style}>
           {children}
-        </Link>
-      </article>
+        </article>
+      </Link>
     );
   }
 }
