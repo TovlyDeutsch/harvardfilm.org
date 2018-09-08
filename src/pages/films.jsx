@@ -21,6 +21,14 @@ class FilmPage extends MenuTemplate {
       this.props.data.allMarkdownRemark.edges
         ? this.props.data.allMarkdownRemark.edges
         : [];
+
+    const thumbnails = {};
+    if (this.props.data.filmPics) {
+      this.props.data.filmPics.edges.forEach(
+        edge =>
+          (thumbnails[edge.node.name] = edge.node.childImageSharp.resize.src)
+      );
+    }
     console.log("pedges", postEdges);
     return (
       <Drawer className="post-template" isOpen={this.state.menuOpen}>
@@ -43,7 +51,7 @@ class FilmPage extends MenuTemplate {
           <MainContent>
             <h1 className="text-center">Our Films</h1>
             {/* TODO: add lazy loading when we start having a lot of films */}
-            <PostListing postEdges={postEdges} />
+            <PostListing postEdges={postEdges} thumbnails={thumbnails} />
           </MainContent>
 
           {/* The tiny footer at the very bottom */}
@@ -83,6 +91,19 @@ export const pageQuery = graphql`
             date
             author
             synopsis
+          }
+        }
+      }
+    }
+    filmPics: allFile(filter: { absolutePath: { regex: "/(thumbnails)/" } }) {
+      edges {
+        node {
+          name
+          publicURL
+          childImageSharp {
+            resize(width: 900, height: 250, cropFocus: ENTROPY) {
+              src
+            }
           }
         }
       }

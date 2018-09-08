@@ -48,6 +48,13 @@ module.exports = {
         path: `${__dirname}/content/profile-pics`
       }
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "thumbnails",
+        path: `${__dirname}/content/thumbnails`
+      }
+    },
     "gatsby-transformer-json",
     {
       resolve: "gatsby-transformer-remark",

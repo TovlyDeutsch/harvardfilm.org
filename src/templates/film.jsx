@@ -171,6 +171,19 @@ export const pageQuery = graphql`
         }
       }
     }
+    filmPics: allFile(filter: { absolutePath: { regex: "/(thumbnails)/" } }) {
+      edges {
+        node {
+          name
+          publicURL
+          childImageSharp {
+            resize(width: 900, height: 250, cropFocus: ENTROPY) {
+              src
+            }
+          }
+        }
+      }
+    }
   }
 `;
 

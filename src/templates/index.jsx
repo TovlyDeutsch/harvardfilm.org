@@ -29,10 +29,17 @@ class IndexTemplate extends MenuTemplate {
     console.log("nodes", nodes);
     const authorsEdges = this.props.data.authors.edges;
     const authorPics = {};
+    const thumbnails = {};
     this.props.data.authorPics.edges.forEach(
       edge =>
         (authorPics[edge.node.name] = edge.node.childImageSharp.resize.src)
     );
+    if (this.props.data.filmPics) {
+      this.props.data.filmPics.edges.forEach(
+        edge =>
+          (thumbnails[edge.node.name] = edge.node.childImageSharp.resize.src)
+      );
+    }
     console.log(authorPics);
     const credits = authorsEdges.map(authorEdge => {
       const authorData = AuthorModel.getAuthor(
@@ -107,6 +114,7 @@ class IndexTemplate extends MenuTemplate {
             <hr />
             <h2 className="home-header our-films">Our Films</h2>
             <PostListing
+              thumbnails={thumbnails}
               postEdges={nodes}
               postAuthors={authorsEdges}
               limit={3}
@@ -155,6 +163,19 @@ export const pageQuery = graphql`
           publicURL
           childImageSharp {
             resize(width: 432, height: 540) {
+              src
+            }
+          }
+        }
+      }
+    }
+    filmPics: allFile(filter: { absolutePath: { regex: "/(thumbnails)/" } }) {
+      edges {
+        node {
+          name
+          publicURL
+          childImageSharp {
+            resize(width: 900, height: 250, cropFocus: ENTROPY) {
               src
             }
           }

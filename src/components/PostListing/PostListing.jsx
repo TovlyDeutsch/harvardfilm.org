@@ -10,11 +10,14 @@ import PostDate from "../PostDate/PostDate";
 import AuthorModel from "../../models/author-model";
 import "./PostListing.css";
 
-const getPostList = (postEdges, authorEdges) =>
+const getPostList = (postEdges, authorEdges, thumbnails) =>
   postEdges.map(postEdge => ({
     path: postEdge.node.fields.path,
     tags: postEdge.node.frontmatter.tags,
-    cover: postEdge.node.frontmatter.cover,
+    // cover: postEdge.node.frontmatter.cover,
+    cover: thumbnails
+      ? thumbnails[postEdge.node.fields.slug.slice(1) + "-thumbnail"]
+      : postEdge.node.frontmatter.cover,
     title: postEdge.node.frontmatter.title,
     date: postEdge.node.frontmatter.date,
     synopsis: postEdge.node.frontmatter.synopsis,
@@ -34,7 +37,12 @@ class PostListing extends React.Component {
   render() {
     let filmList = [];
     // console.log(this.props.postEdges);
-    const postList = getPostList(this.props.postEdges, this.props.postAuthors);
+    const postList = getPostList(
+      this.props.postEdges,
+      this.props.postAuthors,
+      this.props.thumbnails
+    );
+    console.log("post list", postList);
     let limit = this.props.limit ? this.props.limit : postList.length;
     for (let i = 0; i < limit; i++) {
       const post = postList[i];
@@ -49,6 +57,7 @@ class PostListing extends React.Component {
           cover,
           synopsis
         } = post;
+        console.log("cover", cover);
         // TODO: refactor this synopsis section
         let displaySynopsis = synopsis;
         if (synopsis) {
