@@ -15,25 +15,14 @@ class Sponsors extends Component {
           <div className="home-sponsor-text">
             <p className="sponsor-desc">
               <a
-                href="https://www.studypool.com/studyGuides"
+                href="https://www.studypool.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="home-link"
-                data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.studypool.com/studyGuides&amp;source=gmail&amp;ust=1526406473350000&amp;usg=AFQjCNGAzlAe9WCyBU4CRynjh4kzCqHw7g"
               >
-                Literature Study Guides
+                StudyPool
               </a>
-              &nbsp;and&nbsp;
-              <a
-                href="https://www.studypool.com/homework-help-answers"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home-link"
-                data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.studypool.com/studyGuides&amp;source=gmail&amp;ust=1526406473350000&amp;usg=AFQjCNGAzlAe9WCyBU4CRynjh4kzCqHw7g"
-              >
-                Homework Answers
-              </a>
-              &nbsp;at Studypool.
+              , on demand tutoring 24/7
             </p>
           </div>
         </div>
